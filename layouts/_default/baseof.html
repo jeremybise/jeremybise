@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Permanent+Marker" rel="stylesheet">
     <title>{{ if .Title }} {{ .Title }} | {{ end}}{{ $.Site.Title }}</title>
     {{ if .Site.IsServer }}
       {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
@@ -22,9 +23,11 @@
 
     {{ partial "header.html" . }}
 
-    {{ block "main" . }}
-      <!-- Main content here. -->
-    {{ end }}
+    <div class="primary">
+      {{ block "main" . }}
+        <!-- Main content here. -->
+      {{ end }}
+    </div>
 
     {{ partial "footer.html" . }}
 

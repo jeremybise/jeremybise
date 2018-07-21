@@ -1,11 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <div class="main">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
 
-  <h2>Recipes, Etc.</h2>
-  <ul id="all-tags">
-    {{ range $name, $taxonomy := .Site.Taxonomies.recipes }}
-      <li><a href="{{ "/recipes/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
-    {{ end }}
-  </ul>
+    <h2>Recipes, Etc.</h2>
+    <ul id="all-tags">
+      {{ range $name, $taxonomy := .Site.Taxonomies.recipes }}
+        <li><a href="{{ "/recipes/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}
