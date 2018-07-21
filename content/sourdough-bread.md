@@ -7,7 +7,7 @@ recipes:
 
 Time consuming, but fantastic for three simple ingredients.
 
-## Sourdoug Starter
+## Sourdough Starter
 
 1. Measure, by weight, equal parts flour and water and combine.
     * For example, combine 100g and 100g water to produce 200g of starter.
