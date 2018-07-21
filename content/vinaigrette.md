@@ -1,0 +1,5 @@
+---
+title: Vinaigrette
+recipes:
+- Condiments
+---
