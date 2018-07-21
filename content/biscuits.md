@@ -4,4 +4,6 @@ recipes:
 - Bread
 ---
 
-Who doesn't love a fucking biscuit? Assholes. That's who.
+Who doesn't love a biscuit? Assholes. That's who.
+
+STUB

@@ -1,5 +1,5 @@
 ---
-title: Vinaigrette
+title: Basic Vinaigrette
 recipes:
 - Condiments
 ---

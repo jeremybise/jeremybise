@@ -6,7 +6,7 @@
     <h2>Recipes, Etc.</h2>
     <ul id="all-tags">
       {{ range $name, $taxonomy := .Site.Taxonomies.recipes }}
-        <li><a href="{{ "/recipes/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+        <li><a href="{{ "/recipes/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize | title }}</a></li>
       {{ end }}
     </ul>
   </div>
