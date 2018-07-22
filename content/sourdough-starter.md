@@ -1,8 +1,10 @@
 ---
-title: Sour Dough Starter
+title: Sourdough Starter
 recipes:
 - Bread
 - Fermented
+related:
+- sourdough
 ---
 
 It, like, starts sourdough and shit. The whole process is easy; it just takes a couple weeks.

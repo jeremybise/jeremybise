@@ -5,3 +5,12 @@ title = "The Musings of Bise"
 [taxonomies]
     recipe = "recipes"
     snippet = "snippets"
+
+[related]
+threshold = 80
+toLower = true
+
+[[related.indices]]
+name = "related"
+weight = 150
+includeNewer = true
