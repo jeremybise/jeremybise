@@ -297,13 +297,33 @@ template {
 [hidden] {
   display: none; }
 
+.global-header {
+  padding: 1em;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  font-size: .8em;
+  border-bottom: 1px solid #EEE; }
+
+.logo {
+  flex: 2; }
+
+.global-nav {
+  flex: 3; }
+  .global-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; }
+    .global-nav ul li {
+      display: inline-block; }
+      .global-nav ul li a {
+        padding: 10px; }
+
 body {
   font-family: "Merriweather", serif;
   line-height: 1.618;
   font-size: 20px; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Permanent Marker", serif; }
 
 .main {
   max-width: 800px;

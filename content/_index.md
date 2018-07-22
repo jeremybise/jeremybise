@@ -2,4 +2,4 @@
 title: Welcome
 ---
 
-Greetings, earthlings. This is basically my notebook.
+Greetings, earthlings. This is my lame notebook.
