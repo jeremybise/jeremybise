@@ -1,14 +1,17 @@
 .global-header {
-  padding: 1em;
-  max-width: 800px;
-  margin: auto;
+  padding: 1em 2em;
   display: flex;
   font-size: .8em;
   border-bottom: 1px solid #EEE;
+  background: #455A64;
+  color: #FFF;
 }
 
 .logo {
   flex: 2;
+  a {
+    color: #FFF;
+  }
 }
 
 .global-nav {
@@ -22,6 +25,7 @@
       display: inline-block;
       a {
         padding: 10px;
+        color: #FFF;
       }
     }
   }

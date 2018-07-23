@@ -1,5 +1,6 @@
 ---
 title: Sourdough Starter
+date: 2018-07-22
 recipes:
 - Bread
 - Fermented

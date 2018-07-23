@@ -1,12 +1,14 @@
 {{ define "main" }}
   <div class="main">
     <article>
-      <h1>{{ .Title }}</h1>
+      <h1 class="entry-title">{{ .Title }}</h1>
       {{ .Content }}
     </article>
+  </div>
+  <div class="secondary">
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}
-      <h3>See Also</h3>
+      <h3 class="first-heading">See Also</h3>
       <ul>
         {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

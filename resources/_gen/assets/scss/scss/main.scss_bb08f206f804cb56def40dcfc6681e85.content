@@ -297,16 +297,34 @@ template {
 [hidden] {
   display: none; }
 
+.primary {
+  display: flex;
+  padding: 2em; }
+
+.main {
+  flex: 2; }
+
+.secondary {
+  flex: 1; }
+
+.entry-title {
+  margin-top: 0; }
+
+.first-heading {
+  margin-top: 0; }
+
 .global-header {
-  padding: 1em;
-  max-width: 800px;
-  margin: auto;
+  padding: 1em 2em;
   display: flex;
   font-size: .8em;
-  border-bottom: 1px solid #EEE; }
+  border-bottom: 1px solid #EEE;
+  background: #455A64;
+  color: #FFF; }
 
 .logo {
   flex: 2; }
+  .logo a {
+    color: #FFF; }
 
 .global-nav {
   flex: 3; }
@@ -318,15 +336,19 @@ template {
     .global-nav ul li {
       display: inline-block; }
       .global-nav ul li a {
-        padding: 10px; }
+        padding: 10px;
+        color: #FFF; }
 
 body {
   font-family: "Merriweather", serif;
   line-height: 1.618;
-  font-size: 20px; }
+  font-size: 20px;
+  background: #ECEFF1; }
 
-.main {
-  max-width: 800px;
-  margin: auto; }
+a {
+  color: #3949AB;
+  text-decoration: none; }
+  a:hover {
+    color: #1E88E5; }
 
 /*# sourceMappingURL=main.css.map */
