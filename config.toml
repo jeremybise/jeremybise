@@ -4,7 +4,7 @@ title = "The Musings of Bise"
 
 [taxonomies]
     recipe = "recipes"
-    snippet = "snippets"
+    post = "posts"
 
 [related]
 threshold = 80
