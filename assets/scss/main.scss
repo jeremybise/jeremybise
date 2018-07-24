@@ -4,15 +4,15 @@
 @import "header";
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.618;
   font-size: 20px;
-  background: #ECEFF1;
 }
 a {
-  color: #3949AB;
+  color: #00ACC1;
   text-decoration: none;
+  transition: .2s linear;
   &:hover {
-    color: #1E88E5;
+    color: #00ACC1;
   }
 }

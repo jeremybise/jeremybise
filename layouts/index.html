@@ -3,7 +3,6 @@
     {{ range .Site.RegularPages }}
       <article>
         <h1 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-        {{ .Summary }}
         <p class="meta">
           {{ dateFormat "January 1, 2006" .Date }}
         </p>

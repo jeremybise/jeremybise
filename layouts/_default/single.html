@@ -2,6 +2,14 @@
   <div class="main">
     <article>
       <h1 class="entry-title">{{ .Title }}</h1>
+      {{ if isset .Params "featured_image" }}
+      {{ $img := resources.Get .Params.featured_image }}
+      {{ .Scratch.Set "image" ($img.Fill "1200x800") }}
+      {{ $image := .Scratch.Get "image" }}
+      <div class="featured-image">
+        <img src="{{ $image.RelPermalink }}" />
+      </div>
+      {{ end }}
       {{ .Content }}
     </article>
   </div>

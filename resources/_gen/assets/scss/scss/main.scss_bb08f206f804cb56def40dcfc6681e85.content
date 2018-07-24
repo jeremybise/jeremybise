@@ -298,14 +298,18 @@ template {
   display: none; }
 
 .primary {
-  display: flex;
-  padding: 2em; }
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  padding: 2em;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2em; }
 
-.main {
-  flex: 2; }
+.featured-image img {
+  max-width: 100%; }
 
-.secondary {
-  flex: 1; }
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
 
 .entry-title {
   margin-top: 0; }
@@ -315,40 +319,46 @@ template {
 
 .global-header {
   padding: 1em 2em;
-  display: flex;
-  font-size: .8em;
-  border-bottom: 1px solid #EEE;
-  background: #455A64;
-  color: #FFF; }
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 2em;
+  color: #FFFFFF;
+  background: #37474F; }
 
 .logo {
-  flex: 2; }
+  background: #FFF;
+  text-align: center; }
   .logo a {
-    color: #FFF; }
+    color: #37474F;
+    font-size: 3em;
+    display: block; }
 
 .global-nav {
-  flex: 3; }
+  align-self: center; }
   .global-nav ul {
     list-style: none;
     margin: 0;
-    padding: 0;
-    text-align: right; }
+    padding: 0; }
     .global-nav ul li {
       display: inline-block; }
       .global-nav ul li a {
-        padding: 10px;
-        color: #FFF; }
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: #FFF;
+        padding: 10px; }
+        .global-nav ul li a:hover {
+          color: #00ACC1; }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.618;
-  font-size: 20px;
-  background: #ECEFF1; }
+  font-size: 20px; }
 
 a {
-  color: #3949AB;
-  text-decoration: none; }
+  color: #00ACC1;
+  text-decoration: none;
+  transition: .2s linear; }
   a:hover {
-    color: #1E88E5; }
+    color: #00ACC1; }
 
 /*# sourceMappingURL=main.css.map */

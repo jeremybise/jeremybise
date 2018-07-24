@@ -1,10 +1,17 @@
 .primary {
-  display: flex;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
   padding: 2em;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2em;
 }
 .main {
-  flex: 2;
 }
 .secondary {
-  flex: 1;
+}
+.featured-image {
+  img {
+    max-width: 100%;
+  }
 }

@@ -1,31 +1,38 @@
 .global-header {
   padding: 1em 2em;
-  display: flex;
-  font-size: .8em;
-  border-bottom: 1px solid #EEE;
-  background: #455A64;
-  color: #FFF;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 2em;
+  color: #FFFFFF;
+  background: #37474F;
 }
 
 .logo {
-  flex: 2;
+  background: #FFF;
+  text-align: center;
   a {
-    color: #FFF;
+    color: #37474F;
+    font-size: 3em;
+    display: block;
   }
 }
 
 .global-nav {
-  flex: 3;
+  align-self: center;
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: right;
     li {
       display: inline-block;
       a {
-        padding: 10px;
+        font-size: 1.2em;
+        text-transform: uppercase;
         color: #FFF;
+        padding: 10px;
+        &:hover {
+          color: #00ACC1;
+        }
       }
     }
   }
