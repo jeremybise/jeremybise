@@ -1,5 +1,6 @@
 ---
 title: Sourdough Bread
+date: 2018-07-24
 featured_image: media/sourdough-bread.jpeg
 recipes:
 - Bread

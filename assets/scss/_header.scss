@@ -4,16 +4,22 @@
   grid-template-columns: 100px 1fr;
   grid-gap: 2em;
   color: #FFFFFF;
-  background: #37474F;
+  background: #263238;
 }
 
 .logo {
   background: #FFF;
   text-align: center;
+  align-self: center;
   a {
     color: #37474F;
-    font-size: 3em;
+    font-size: 1em;
     display: block;
+    padding: 1em;
+    @media (min-width: 768px) {
+      font-size: 3em;
+      padding: 0;
+    }
   }
 }
 
@@ -26,7 +32,7 @@
     li {
       display: inline-block;
       a {
-        font-size: 1.2em;
+        font-size: 1em;
         text-transform: uppercase;
         color: #FFF;
         padding: 10px;
