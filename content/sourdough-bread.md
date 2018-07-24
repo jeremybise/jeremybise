@@ -32,4 +32,6 @@ Time consuming, but fantastic for three simple ingredients.
 
 6. Toward the end of the rising time, preheat the oven to 425 degrees F.
 
-7. Spray loaves with lukewarm water, then bake for 25-30 minutes, until deep golden brown.
+7. Spray loaves with lukewarm water. Slash each loaf deeply with a razer, then bake for 25-30 minutes, until deep golden brown.
+
+8. Cool on a rack.
