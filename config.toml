@@ -9,8 +9,8 @@ title = "The Musings of Bise"
 [related]
 threshold = 80
 toLower = true
+includeNewer = true
 
 [[related.indices]]
 name = "related"
 weight = 150
-includeNewer = true
