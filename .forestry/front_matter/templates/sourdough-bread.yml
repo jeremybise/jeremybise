@@ -1,0 +1,38 @@
+---
+label: Recipes
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+  config:
+    required: true
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+  config:
+    required: true
+- name: featured_image
+  label: Featured image
+  type: file
+  hidden: false
+  default: ''
+- name: recipes
+  label: Recipes
+  type: list
+  hidden: false
+  default: ''
+- name: related
+  label: Related
+  type: list
+  hidden: false
+  default: ''
+  config:
+    use_select: false
+    source:
+      type: simple
