@@ -5,6 +5,7 @@ Just my personal public notebook.
 ## Todo
 
 * Thumbnails
-* Items on taxonomy pages
+* Formatting to taxonomy pages
+* Feed URLs listed somewhere
 * Search
 * Webmentions
