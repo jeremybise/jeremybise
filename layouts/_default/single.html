@@ -18,8 +18,18 @@
     <p>
       <a class="u-url" href="{{ .Permalink }}">
         Published <time class="dt-published">{{ .PublishDate.Format "2006-01-02" }}</time>
-      </a>
+      </a> by
+      <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
     </p>
+
+    <h3>Posted In</h3>
+    <ul id="tags">
+      {{ range .Params.recipes }}
+        <li>
+          <a class="p-category" href="{{ "/recipes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
 
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}
