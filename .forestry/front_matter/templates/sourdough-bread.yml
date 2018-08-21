@@ -1,18 +1,22 @@
 ---
-label: Sourdough Bread
-hide_body: 
-is_partial: 
+label: Posts
+hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
   type: text
   hidden: false
   default: ''
+  config:
+    required: true
 - name: date
   label: Date
   type: datetime
   hidden: false
   default: ''
+  config:
+    required: true
 - name: featured_image
   label: Featured image
   type: file
@@ -28,3 +32,7 @@ fields:
   type: list
   hidden: false
   default: ''
+  config:
+    use_select: false
+    source:
+      type: simple
