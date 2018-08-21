@@ -21,3 +21,5 @@ fields:
   hidden: false
   default: ''
   description: Enter post category/categories
+pages:
+- content/web-development-on-windows.md
