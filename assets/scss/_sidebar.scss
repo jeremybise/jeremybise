@@ -1,0 +1,13 @@
+.sidebar {
+  border-left: 1px solid #EEE;
+  padding: 0 2em;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    margin-top: 0;
+    color: $light;
+  }
+}

@@ -23,10 +23,14 @@
 
     {{ partial "header.html" . }}
 
-    <div class="primary">
-      {{ block "main" . }}
-        <!-- Main content here. -->
-      {{ end }}
+    <div class="main">
+      <div class="primary">
+        {{ block "main" . }}
+          <!-- Main content here. -->
+        {{ end }}
+      </div>
+
+      {{ partial "sidebar.html" . }}
     </div>
 
     {{ partial "footer.html" . }}

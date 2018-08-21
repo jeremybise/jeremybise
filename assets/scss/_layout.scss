@@ -1,13 +1,19 @@
-.primary {
+.main {
   max-width: 1100px;
   margin: auto;
   display: grid;
   padding: 1em;
   @media (min-width: 768px) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-column-gap: 2em;
     padding: 2em;
   }
+}
+.primary {
+
+}
+.sidebar {
+
 }
 .featured-image {
   img {
