@@ -2,11 +2,11 @@
 new_page_extension: md
 auto_deploy: true
 admin_path: admin
-webhook_url: 
+webhook_url:
 sections:
 - type: directory
   path: content
-  label: Pages
+  label: Posts
   create: all
   match: "*"
 upload_dir: assets/media
