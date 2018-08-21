@@ -1,24 +1,28 @@
 .global-header {
   padding: 1em 2em;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 75px 1fr;
   grid-gap: 2em;
-  color: #FFFFFF;
-  background: #263238;
 }
 
 .logo {
-  background: #FFF;
-  text-align: center;
-  align-self: center;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: $text;
+  position: relative;
   a {
-    color: #37474F;
+    font-family: $accentFont;
     font-size: 1em;
-    display: block;
-    padding: 1em;
-    @media (min-width: 768px) {
-      font-size: 3em;
-      padding: 0;
+    display: inline-block;
+    color: $white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      color: $accent;
     }
   }
 }
@@ -34,10 +38,10 @@
       a {
         font-size: 1em;
         text-transform: uppercase;
-        color: #FFF;
         padding: 10px;
+        color: $text;
         &:hover {
-          color: #00ACC1;
+          color: $accent;
         }
       }
     }

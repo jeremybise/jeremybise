@@ -1,4 +1,5 @@
 @import "normalize";
+@import "vars";
 @import "layout";
 @import "type";
 @import "header";
@@ -6,15 +7,16 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.618;
+  background: $background;
   @media (min-width: 768px) {
     font-size: 20px;
   }
 }
 a {
-  color: #00ACC1;
+  color: $accent;
   text-decoration: none;
   transition: .2s linear;
   &:hover {
-    color: #00ACC1;
+    color: $text;
   }
 }
