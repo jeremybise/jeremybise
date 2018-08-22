@@ -21,6 +21,8 @@
     <div class="e-content">
       {{ .Content }}
     </div>
+
+    {{ partial "webmentions.html" . }}
   </article>
 {{ end }}
 

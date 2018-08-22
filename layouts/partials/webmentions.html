@@ -1,0 +1,17 @@
+{{ $webmentions := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s" .URL) }}
+
+{{ with $webmentions.links }}
+  <hr />
+  <div class="webmentions">
+    <h3>Webmentions</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          <strong>{{ .activity.type }}</strong>
+          {{ dateFormat "January 2, 2006" .data.published }}
+          {{ safeHTML .activity.sentence_html }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
