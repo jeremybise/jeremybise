@@ -1,14 +1,14 @@
 ---
 title: Sourdough Starter
-date: 2018-07-22
+date: 2018-07-21 00:00:00 -0400
 featured_image: media/sourdough-starter.jpeg
 recipes:
 - Bread
 - Fermented
 related:
 - sourdough
----
 
+---
 Make your bread rise with time and critters. The whole process is easy; it just takes a couple weeks and some babysitting.
 
 These notes produce 400g of starter. You can make any amount you like - just keep the flour and water proportions the same.
