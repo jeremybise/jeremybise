@@ -2,6 +2,13 @@
   <article class="h-entry">
     <h1 class="p-name entry-title">{{ .Title }}</h1>
 
+    <p class="post-meta">
+        <a class="u-url" href="{{ .Permalink }}">
+          Published <time class="dt-published">{{ .PublishDate.Format "2006-01-02" }}</time>
+        </a> by
+        <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
+      </p>
+
     {{ if isset .Params "featured_image" }}
     {{ $img := resources.Get .Params.featured_image }}
     {{ .Scratch.Set "image" ($img.Fill "1200x800") }}
@@ -14,14 +21,11 @@
     <div class="e-content">
       {{ .Content }}
     </div>
+  </article>
+{{ end }}
 
-    <p>
-      <a class="u-url" href="{{ .Permalink }}">
-        Published <time class="dt-published">{{ .PublishDate.Format "2006-01-02" }}</time>
-      </a> by
-      <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
-    </p>
-
+{{ define "sidebar" }}
+  <div class="sidebar">
     <h3>Posted In</h3>
     <ul id="tags">
       {{ range .Params.recipes }}
@@ -40,5 +44,5 @@
         {{ end }}
       </ul>
     {{ end }}
-  </article>
+  </div>
 {{ end }}

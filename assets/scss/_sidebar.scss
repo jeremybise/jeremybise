@@ -1,9 +1,12 @@
 .sidebar {
   border-left: 1px solid #EEE;
-  padding: 0 2em;
+  padding: 0 1em;
+  @media(min-width: 768px) {
+    padding: 2em;
+  }
   ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
   }
   h3 {

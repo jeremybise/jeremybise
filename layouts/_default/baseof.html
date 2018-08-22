@@ -34,7 +34,9 @@
         {{ end }}
       </div>
 
-      {{ partial "sidebar.html" . }}
+      {{ block "sidebar" . }}
+        <!-- Sidebar content here. -->
+      {{ end }}
     </div>
 
     {{ partial "footer.html" . }}
