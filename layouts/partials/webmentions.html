@@ -1,13 +1,48 @@
-{{ $webmentions := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s" .URL) }}
+{{ $likes := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=like-of" .URL) }}
+{{ $reposts := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=repost-of" .URL) }}
+{{ $replies := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=in-reply-to" .URL) }}
 
-{{ with $webmentions.links }}
+{{ with $likes.links }}
   <hr />
   <div class="webmentions">
-    <h3>Webmentions <3</h3>
+    <h3>Likes <3</h3>
     <ul>
       {{ range . }}
         <li>
-          <strong>{{ .activity.type }}</strong>
+          {{ with .data.published }}
+            {{ dateFormat "January 2, 2006" . }}
+          {{ end }}
+          {{ safeHTML .activity.sentence_html }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+{{ with $reposts.links }}
+  <hr />
+  <div class="webmentions">
+    <h3>Reposts</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          {{ with .data.published }}
+            {{ dateFormat "January 2, 2006" . }}
+          {{ end }}
+          {{ safeHTML .activity.sentence_html }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+{{ with $replies.links }}
+  <hr />
+  <div class="webmentions">
+    <h3>Replies</h3>
+    <ul>
+      {{ range . }}
+        <li>
           {{ with .data.published }}
             {{ dateFormat "January 2, 2006" . }}
           {{ end }}
