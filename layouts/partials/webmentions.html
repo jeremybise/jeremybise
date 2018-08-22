@@ -8,7 +8,9 @@
       {{ range . }}
         <li>
           <strong>{{ .activity.type }}</strong>
-          {{ dateFormat "January 2, 2006" .data.published }}
+          {{ with .data.published }}
+            {{ dateFormat "January 2, 2006" . }}
+          {{ end }}
           {{ safeHTML .activity.sentence_html }}
         </li>
       {{ end }}
