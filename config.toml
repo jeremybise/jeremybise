@@ -1,6 +1,6 @@
 baseURL = "https://jeremybise.com/"
 languageCode = "en-us"
-title = "The Musings of Bise"
+title = "The notes of Jeremy Bise"
 
 [taxonomies]
     recipe = "recipes"
