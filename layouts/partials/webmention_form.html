@@ -1,0 +1,15 @@
+<div class="webmention-form">
+  <hr />
+  <h3>Published a response?</h3>
+  <p>Let me know the URL here:</p>
+
+  <form action="https://webmention.io/jeremybise.com/webmention" method="post">
+    <input name="source" placeholder="source url">
+    <input name="target" value="{{ printf "https://jeremybise.com%s" .URL }}" type="hidden">
+    <input class="button" value="Send Webmention" type="submit">
+  </form>
+
+  <p>
+    <a href="/webmentions/">WTF is this?</a>
+  </p>
+</div>
