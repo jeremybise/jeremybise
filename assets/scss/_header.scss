@@ -11,25 +11,19 @@
 }
 
 .logo {
-  display: inline-block;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background: $text;
-  position: relative;
-  a {
-    font-family: $accentFont;
-    font-size: 1em;
-    display: inline-block;
-    color: $white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  svg {
+    width: 75px;
+    height: 75px;
+    .logo-fill {
+      transition: .2s linear;
+    }
     &:hover {
-      color: $accent;
+      .logo-fill {
+        fill: $accent;
+      }
     }
   }
+
 }
 
 .global-nav {

@@ -352,24 +352,13 @@ hr {
     .global-header {
       padding: 1em 2em; } }
 
-.logo {
-  display: inline-block;
+.logo svg {
   width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background: #333333;
-  position: relative; }
-  .logo a {
-    font-family: "Rock Salt";
-    font-size: 1em;
-    display: inline-block;
-    color: #FFFFFF;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-    .logo a:hover {
-      color: #DB2C17; }
+  height: 75px; }
+  .logo svg .logo-fill {
+    transition: .2s linear; }
+  .logo svg:hover .logo-fill {
+    fill: #DB2C17; }
 
 .global-nav {
   align-self: center; }
