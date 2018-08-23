@@ -1,8 +1,9 @@
 .sidebar {
-  border-left: 1px solid #EEE;
-  padding: 0 1em;
+  margin-top: 1em;
   @media(min-width: 768px) {
-    padding: 2em;
+    border-left: 1px solid #EEE;
+    padding: 0 1em;
+    margin-top: 0;
   }
   ul {
     list-style: none;

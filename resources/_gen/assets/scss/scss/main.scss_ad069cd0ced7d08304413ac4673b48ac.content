@@ -345,7 +345,7 @@ hr {
   padding: 1em;
   display: grid;
   grid-template-columns: 75px 1fr;
-  grid-gap: 2em;
+  grid-gap: 1em;
   max-width: 1100px;
   margin: auto; }
   @media (min-width: 768px) {
@@ -388,11 +388,12 @@ hr {
           color: #DB2C17; }
 
 .sidebar {
-  border-left: 1px solid #EEE;
-  padding: 0 1em; }
+  margin-top: 1em; }
   @media (min-width: 768px) {
     .sidebar {
-      padding: 2em; } }
+      border-left: 1px solid #EEE;
+      padding: 0 1em;
+      margin-top: 0; } }
   .sidebar ul {
     list-style: none;
     margin: 0 0 2em 0;

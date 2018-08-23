@@ -1,0 +1,50 @@
+{{ define "main" }}
+  <article class="h-entry">
+    <h1 class="p-name entry-title">{{ .Title }}</h1>
+
+    <p class="post-meta">
+        <a class="u-url" href="{{ .Permalink }}">
+          Published <time class="dt-published">{{ .PublishDate.Format "January 2, 2006" }}</time>
+        </a> by
+        <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
+      </p>
+
+    {{ if isset .Params "featured_image" }}
+    {{ $img := resources.Get .Params.featured_image }}
+    {{ .Scratch.Set "image" ($img.Fill "1200x800") }}
+    {{ $image := .Scratch.Get "image" }}
+    <div class="featured-image">
+      <img src="{{ $image.RelPermalink }}" />
+    </div>
+    {{ end }}
+
+    <div class="e-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "webmentions.html" . }}
+  </article>
+{{ end }}
+
+{{ define "sidebar" }}
+  <div class="sidebar">
+    <h3>Posted In</h3>
+    <ul id="tags">
+      {{ range .Params.recipes }}
+        <li>
+          <a class="p-category" href="{{ "/recipes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+      <h3 class="first-heading">See Also</h3>
+      <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+{{ end }}
