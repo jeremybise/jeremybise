@@ -1,5 +1,6 @@
 {{ $likes := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=like-of" .URL) }}
 {{ $reposts := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=repost-of" .URL) }}
+{{ $mentions := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=mention-of" .URL) }}
 {{ $replies := getJSON (printf "https://webmention.io/api/mentions?target=https://jeremybise.com%s&wm-property=in-reply-to" .URL) }}
 
 {{ with $likes.links }}
@@ -23,6 +24,23 @@
   <hr />
   <div class="webmentions">
     <h3>Reposts</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          {{ with .data.published }}
+            {{ dateFormat "January 2, 2006" . }}
+          {{ end }}
+          {{ safeHTML .activity.sentence_html }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+
+{{ with $mentions.links }}
+  <hr />
+  <div class="webmentions">
+    <h3>Mentions</h3>
     <ul>
       {{ range . }}
         <li>
