@@ -7,7 +7,6 @@ recipes:
 - Fermented
 related:
 - sourdough
-
 ---
 Make your bread rise with time and critters. The whole process is easy; it just takes a couple weeks and some babysitting.
 
