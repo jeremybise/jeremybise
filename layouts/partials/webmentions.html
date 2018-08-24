@@ -6,14 +6,13 @@
 {{ with $likes.links }}
   <hr />
   <div class="webmentions">
-    <h3>Likes <3</h3>
-    <ul>
+    <h3>Likes</h3>
+    <ul class="avatars">
       {{ range . }}
         <li>
-          {{ with .data.published }}
-            {{ dateFormat "January 2, 2006" . }}
-          {{ end }}
-          {{ safeHTML .activity.sentence_html }}
+          <a href="{{ .data.url }}">
+            <img src="{{ .data.author.photo }}" />
+          </a>
         </li>
       {{ end }}
     </ul>
@@ -24,13 +23,13 @@
   <hr />
   <div class="webmentions">
     <h3>Reposts</h3>
-    <ul>
+    <ul class="avatars">
       {{ range . }}
         <li>
-          {{ with .data.published }}
-            {{ dateFormat "January 2, 2006" . }}
-          {{ end }}
-          {{ safeHTML .activity.sentence_html }}
+          <li>
+            <a href="{{ .data.url }}">
+              <img src="{{ .data.author.photo }}" />
+            </a>
         </li>
       {{ end }}
     </ul>
