@@ -27,7 +27,7 @@
       {{ range . }}
         <li>
           <li>
-            <a href="{{ .data.url }}">
+            <a href="{{ .data.url }}" title="{{ .data.author.name }}">
               <img src="{{ .data.author.photo }}" />
             </a>
         </li>
