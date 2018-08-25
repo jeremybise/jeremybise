@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article class="h-entry">
-    <h1 class="p-name entry-title">{{ .Title }}</h1>
+    <h1 class="p-name">{{ .Title }}</h1>
 
     <p class="post-meta">
         <a class="u-url" href="{{ .Permalink }}">
@@ -32,11 +32,20 @@
   <div class="sidebar">
     <h3>Posted In</h3>
     <ul id="tags">
-      {{ range .Params.recipes }}
+      {{ with .Params.recipes }}
+        {{ range . }}
+          <li>
+            <a class="p-category" href="{{ "/recipes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+      {{ with .Params.notes }}
+      {{ range . }}
         <li>
-          <a class="p-category" href="{{ "/recipes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          <a class="p-category" href="{{ "/notes/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
         </li>
       {{ end }}
+    {{ end }}
     </ul>
 
     {{ $related := .Site.RegularPages.Related . | first 5 }}

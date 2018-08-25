@@ -1,11 +1,11 @@
 ---
 title: Modern Web Development on Windows
 date: 2018-08-20 00:00:00 -0400
-posts:
+notes:
 - Dev
 draft: true
-
 ---
+
 Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually *nice*.
 
 Here's how I went about it.

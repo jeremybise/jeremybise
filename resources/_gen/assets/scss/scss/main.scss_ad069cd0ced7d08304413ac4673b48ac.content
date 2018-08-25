@@ -311,15 +311,6 @@ template {
 .featured-image img {
   max-width: 100%; }
 
-.post {
-  display: inline-block; }
-
-.meta {
-  display: inline-block;
-  margin-right: 2em;
-  font-size: 2em;
-  color: #aaaaaa; }
-
 body {
   color: #333333; }
 
@@ -331,9 +322,6 @@ hr {
   border-top: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 2em 0; }
-
-.entry-title {
-  margin: 0; }
 
 .first-heading {
   margin-top: 0; }
@@ -407,6 +395,26 @@ footer {
       width: 40px;
       height: 40px;
       border-radius: 50%; }
+
+.article-summary {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1em 0; }
+  @media (min-width: 768px) {
+    .article-summary {
+      display: flex;
+      padding: 2em 0; } }
+  .article-summary .meta {
+    flex: 1;
+    color: #aaaaaa; }
+  .article-summary .post {
+    flex: 4;
+    margin-right: 2em;
+    color: #aaaaaa; }
+    .article-summary .post .entry-title {
+      margin: 0; }
+      .article-summary .post .entry-title a {
+        display: block; }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
