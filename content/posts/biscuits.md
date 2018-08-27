@@ -7,4 +7,6 @@ recipes:
 
 Who doesn't love a biscuit? Assholes. That's who.
 
-STUB
+## Ingredients
+
+## Directions
