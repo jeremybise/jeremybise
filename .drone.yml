@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: cbrgm/drone-hugo:0.47.1
+    image: plugins/hugo:1.1
     output: public
     when:
       branch: [ master ]
