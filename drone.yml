@@ -4,7 +4,7 @@ pipeline:
     output: public
     validate: true
     when:
-    brand: [ master ]
+      branch: [ master ]
   publish:
     image: plugins/s3-sync:1
     bucket: jeremybise.com
