@@ -8,8 +8,7 @@ pipeline:
   publish:
     image: plugins/s3-sync:1
     bucket: jeremybise.com
-    access_key: AKIAJIHUGGOPTUR227KA
-    secret_key: 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
+    secrets: [ aws_access_key, aws_secret_key ]
     region: us-east-1
     source: public
     target: /
