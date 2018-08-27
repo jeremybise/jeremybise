@@ -2,7 +2,6 @@ pipeline:
   build:
     image: cbrgm/drone-hugo:latest
     output: public
-    validate: true
     when:
       branch: [ master ]
   publish:
