@@ -11,11 +11,12 @@ pipeline:
       - hugo
   publish:
     image: cschlosser/drone-ftps
-    hostname: my.thosegeeks.com:21
+    hostname: my.thosegeeks.com
     secrets: [ ftp_username, ftp_password ]
     clear_dir: true
     dest_dir: /httpdocs
     src_dir: /public
+    secure: false
   # publish:
   #   image: plugins/s3-sync:1
   #   bucket: jeremybise.com
