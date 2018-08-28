@@ -1,7 +1,7 @@
 ---
 title: Sourdough Bread
 date: 2018-07-24
-featured_image: media/sourdough-bread3.jpg
+featured_image: "media/sourdough-bread3.jpg"
 recipes:
 - Bread
 - Fermented

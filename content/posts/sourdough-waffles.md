@@ -1,6 +1,6 @@
 ---
 title: Sourdough Waffles
-featured_image: media/sourdough-waffles.jpg
+featured_image: "media/sourdough-waffles.jpg"
 date: 2018-08-24
 recipes:
 - Bread
