@@ -4,7 +4,7 @@ pipeline:
     commands:
       - apt-get update && apt-get -y install wget
       - wget https://github.com/gohugoio/hugo/releases/download/v0.47.1/hugo_extended_0.47.1_Linux-64bit.deb
-      - sudo dpkg -i hugo*.deb
+      - dpkg -i hugo*.deb
       - hugo
   publish:
     image: plugins/s3-sync:1
