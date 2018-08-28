@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: cbrgm/drone-hugo:latest
+    image: plugins/hugo:latest
     validate: true
     version: 0.47.1
   publish:
