@@ -1,8 +1,14 @@
 pipeline:
   build:
-    image: plugins/hugo:latest
-    validate: true
-    version: 0.47.1
+    image: debian
+    commands:
+      - apt-get update -qq < /dev/null
+      - apt-get install -qq wget < /dev/null
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.47.1/hugo_0.47.1_Linux-64bit.tar.gz
+      - tar xzf hugo_0.47.1_Linux-64bit.tar.gz -C /usr/local/bin/
+      - rm hugo_0.47.1_Linux-64bit.tar.gz
+      - hugo version
+      - hugo
   publish:
     image: plugins/s3-sync:1
     bucket: jeremybise.com
