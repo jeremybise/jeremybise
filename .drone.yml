@@ -2,7 +2,7 @@ pipeline:
   build:
     image: alpine
     commands:
-      - wget https://github.com/gohugoio/hugo/releases/download/v0.47.1/hugo_0.47_Linux-64bit.tar.gz
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.47/hugo_0.47_Linux-64bit.tar.gz
       - tar xzf hugo_0.47_Linux-64bit.tar.gz -C /usr/local/bin/
       - hugo version
       - hugo
