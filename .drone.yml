@@ -1,9 +1,9 @@
 pipeline:
   build:
-    image: plugins/hugo:1.1
-    output: public
-    when:
-      branch: [ master ]
+    image: debian:stretch
+    commands:
+      - apt-get update && apt-get -y install hugo python-pygments
+      - hugo
   publish:
     image: plugins/s3-sync:1
     bucket: jeremybise.com
