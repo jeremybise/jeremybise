@@ -2,6 +2,7 @@ pipeline:
   build:
     image: cbrgm/drone-hugo:latest
     validate: true
+    version: 0.47.1
   publish:
     image: plugins/s3-sync:1
     bucket: jeremybise.com
