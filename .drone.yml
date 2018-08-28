@@ -14,8 +14,8 @@ pipeline:
     hostname: my.thosegeeks.com:21
     secrets: [ ftp_username, ftp_password ]
     clear_dir: true
-    dest_dir: httpdocs
-    src_dir: public
+    dest_dir: /httpdocs
+    src_dir: /public
   # publish:
   #   image: plugins/s3-sync:1
   #   bucket: jeremybise.com
