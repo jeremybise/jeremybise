@@ -9,10 +9,9 @@
         <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
       </p>
 
-    {{ if isset .Params "featured_image" }}
-    {{ $img := resources.Get .Params.featured_image }}
-    {{ .Scratch.Set "image" ($img.Fill "1200x800") }}
-    {{ $image := .Scratch.Get "image" }}
+    {{ with .Params.featured_image }}
+    {{ $img := resources.Get . }}
+    {{ $image := ($img.Fill "1200x800") }}
     <div class="featured-image">
       <img src="{{ $image.RelPermalink }}" />
     </div>
