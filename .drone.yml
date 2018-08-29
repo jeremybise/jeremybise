@@ -1,9 +1,9 @@
 pipeline:
   build:
-    image: debian
+    image: alpine
     commands:
-      - apt-get update -qq < /dev/null
-      - apt-get install -qq wget < /dev/null
+      - apk add --update tar curl py-pygments
+      - rm -rf /var/cache/apk/*
       - wget https://github.com/gohugoio/hugo/releases/download/v0.47.1/hugo_0.47.1_Linux-64bit.tar.gz
       - tar xzf hugo_0.47.1_Linux-64bit.tar.gz -C /usr/local/bin/
       - rm hugo_0.47.1_Linux-64bit.tar.gz
