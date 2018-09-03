@@ -18,7 +18,7 @@ Install Windows Subsystem Linux by following the directions here: [Install the L
 
 The Windows terminal is absolutely hideous. Let’s fix that shit.
 
-First, let’s install Hyper.js. It is a much better looking modern terminal emulator.
+First, let’s install [Hyper.js](https://hyper.is/). It is a much better looking modern terminal emulator.
 
 Once Hyper is installed, let’s edit the config to make Bash its default. As web developers, all my work is going to be done under WSL, so why not make it the default?
 
