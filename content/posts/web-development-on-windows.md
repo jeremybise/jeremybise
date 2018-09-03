@@ -14,13 +14,28 @@ Here's how I went about it.
 
 Install Windows Subsystem Linux by following the directions here: [Install the Linux Subsystem on Windows 10 | Microsoft Docs](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
 
+Make sure to launch your distro's Windows app before proceeding as there's some setup it has to do on first run.
+
 ## Fix the Godawful Terminal
 
 The Windows terminal is absolutely hideous. Let’s fix that shit.
 
+### Install Hyper.js
+
 First, let’s install [Hyper.js](https://hyper.is/). It is a much better looking modern terminal emulator.
 
-Once Hyper is installed, let’s edit the config to make Bash its default. As web developers, all my work is going to be done under WSL, so why not make it the default?
+Once Hyper is installed, let’s edit the config to make Bash its default. 
+
+Under Hyper preferences (CTRL + ,), set shell to:
+
+shell: 'C:\\Windows\\System32\\bash.exe'
+
+### Install ZSH
+
+sudo apt-get install zsh
+vim ~/.bashrc
+
+Add the following to run ZSH when Bash starts:
 
 ```
 if [ -t 1 ]; then
@@ -28,9 +43,18 @@ exec zsh
 fi
 ```
 
-Second, I like ZSH a whole lot better than bash, so let’s install ZSH and Oh My ZSH.
+Relaunch Hyper and choose option 2.
 
-Now that we have a familiar shell, I hate the font. I like Fira Code. Download Fira Code and install it into Windows and then set the default font in Hyper.
+### Install Oh My ZSH
+Run the following:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+### Get a Decent Font
+
+Now that we have a familiar shell, I hate the font. I like [Fira Code](https://github.com/tonsky/FiraCode). Download Fira Code and install it into Windows and then set the default font in Hyper (CTRL + ,).
 
 Finally, I personally like dark colors for my terminal and development. Hyper Snazzy looks pretty damn good to me.
 
@@ -46,26 +70,18 @@ autoload -Uz compinit
 compinit
 ```
 
+Relaunch Hyper. Directories are now pretty.
+
 ## Development Setup
 
-Most of this shit is the easy part because we can use `apt` to install our packages. It's a package manager a lot like Homebrew for Mac.
+Inside your fancy new Hyper terminal:
 
 Install Git
 ```
 sudo apt-get install git
 ```
 
-Install NVM & Node
-```
-
-```
-
-We're starting to do some static sites, so I'll set up Hugo.
-```
-
-```
-
-For WordPress sites, ...?
+## Editor
 
 For code editing, you can't go wrong with VS Code. You can check out my VS Code settings here. Most notably, I set Fira Code as my font of choice and we set VS code's integrated terminal to use WSL bash (which launches ZSH for us based on the above settings).
 
