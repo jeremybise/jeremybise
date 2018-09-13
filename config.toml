@@ -2,6 +2,8 @@ baseURL = "https://jeremybise.com/"
 languageCode = "en-us"
 title = "The notes of Jeremy Bise"
 
+pygmentsCodeFences = true
+
 [taxonomies]
     recipe = "recipes"
     note = "notes"

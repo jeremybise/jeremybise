@@ -1,10 +1,11 @@
 ---
 title: Modern Web Development on Windows
-date: 2018-08-20 00:00:00 -0400
+date: 2018-09-13
 notes:
 - Dev
-draft: true
 ---
+
+**NOTE: This is kind of a work in progress.**
 
 Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually *nice*.
 
@@ -24,20 +25,24 @@ The Windows terminal is absolutely hideous. Let’s fix that shit.
 
 First, let’s install [Hyper.js](https://hyper.is/). It is a much better looking modern terminal emulator.
 
-Once Hyper is installed, let’s edit the config to make Bash its default. 
+Once Hyper is installed, let’s edit the config to make Bash its default.
 
 Under Hyper preferences (CTRL + ,), set shell to:
 
+```shell
 shell: 'C:\\Windows\\System32\\bash.exe'
+```
 
 ### Install ZSH
 
+```shell
 sudo apt-get install zsh
 vim ~/.bashrc
+```
 
 Add the following to run ZSH when Bash starts:
 
-```
+```shell
 if [ -t 1 ]; then
 exec zsh
 fi
@@ -48,7 +53,7 @@ Relaunch Hyper and choose option 2.
 ### Install Oh My ZSH
 Run the following:
 
-```
+```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -58,9 +63,9 @@ Now that we have a familiar shell, I hate the font. I like [Fira Code](https://g
 
 Finally, I personally like dark colors for my terminal and development. Hyper Snazzy looks pretty damn good to me.
 
-Lastly, the only hideous thing is the directory listings. Add the following shit to the bottom of your .zshrc.
+Lastly, the only hideous thing is the directory listings. Add the following shit to the bottom of your `.zshrc` file.
 
-```
+```shell
 # Change ls colors
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
@@ -74,16 +79,19 @@ Relaunch Hyper. Directories are now pretty.
 
 ## Development Setup
 
-Inside your fancy new Hyper terminal:
+### Install Git
 
-Install Git
-```
+```shell
 sudo apt-get install git
 ```
 
 ## Editor
 
-For code editing, you can't go wrong with VS Code. You can check out my VS Code settings here. Most notably, I set Fira Code as my font of choice and we set VS code's integrated terminal to use WSL bash (which launches ZSH for us based on the above settings).
+For code editing, you can't go wrong with [Visual Studio Code](https://code.visualstudio.com/). I set Fira Code as my font of choice and we set VS code's integrated terminal to use WSL bash instead of PowerShell. In `settings.json`, that looks like this:
+
+```shell
+"terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+```
 
 # A Note on Directories
 The directories in WSL confused the shit out of me, but I finally figured it out. Here's how I believe it should be used.
