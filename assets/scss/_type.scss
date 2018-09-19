@@ -7,6 +7,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1em;
 }
 
+pre {
+  word-break: break-all;
+  word-wrap: break-word;
+  code {
+    white-space: pre-wrap;
+  }
+}
+
 hr {
   border-top: 0;
   border-bottom: 1px solid rgba(0,0,0,.1);
