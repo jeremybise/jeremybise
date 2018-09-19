@@ -16,3 +16,11 @@ pipeline:
     dest_dir: /httpdocs
     src_dir: /public
     secure: false
+  cache:
+    image: waracle/cloudflare
+    environment:
+      - CF_API_KEY=$CF_API_KEY
+      - CF_API_EMAIL=$CF_API_EMAIL
+      - CF_API_DOMAIN=jeremybise.com
+    commands:
+      - cfcli purge
