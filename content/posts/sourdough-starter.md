@@ -2,9 +2,8 @@
 title: Sourdough Starter
 date: 2018-07-21 00:00:00 -0400
 featured_image: "media/sourdoughstarter.jpg"
-recipes:
-- Bread
-- Fermented
+categories:
+- Recipes
 related:
 - sourdough
 ---

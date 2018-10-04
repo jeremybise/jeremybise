@@ -7,8 +7,7 @@ pygmentsUseClasses = true
 enableEmoji = true
 
 [taxonomies]
-    recipe = "recipes"
-    note = "notes"
+category = "categories"
 
 [related]
 threshold = 80

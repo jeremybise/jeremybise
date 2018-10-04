@@ -1,8 +1,8 @@
 ---
 draft: true
 title: Cornbread Salad
-recipes:
-- Side Dishes
+categories:
+- Recipes
 ---
 
 Best damn side dish I know of.

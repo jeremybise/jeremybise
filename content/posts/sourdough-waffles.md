@@ -1,11 +1,9 @@
 ---
-title: Sourdough Waffles
+title: Sourdough Waffles + Pancakes
 featured_image: "media/sourdoughwaffles.jpg"
 date: 2018-08-24
-recipes:
-- Bread
-- Breakfast
-- Fermented
+categories:
+- Recipes
 related:
 - sourdough
 ---

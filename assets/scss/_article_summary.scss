@@ -6,9 +6,14 @@
     display: flex;
     padding: 2em 0;
   }
+  .featured-image-thumb img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
   .meta {
     flex: 1;
     color: $light;
+    margin-right: 2em;
   }
   .post {
     flex: 4;

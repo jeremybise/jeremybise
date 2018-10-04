@@ -419,9 +419,13 @@ footer {
     .article-summary {
       display: flex;
       padding: 2em 0; } }
+  .article-summary .featured-image-thumb img {
+    max-width: 100%;
+    border-radius: 50%; }
   .article-summary .meta {
     flex: 1;
-    color: #aaaaaa; }
+    color: #aaaaaa;
+    margin-right: 2em; }
   .article-summary .post {
     flex: 4;
     margin-right: 2em;

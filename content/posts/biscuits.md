@@ -1,8 +1,8 @@
 ---
 draft: true
 title: Biscuits
-recipes:
-- Bread
+categories:
+- Recipes
 ---
 
 Who doesn't love a biscuit? Assholes. That's who.

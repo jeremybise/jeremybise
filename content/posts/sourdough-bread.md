@@ -2,9 +2,8 @@
 title: Sourdough Bread
 date: 2018-07-24
 featured_image: "media/sourdoughbread.jpg"
-recipes:
-- Bread
-- Fermented
+categories:
+- Recipes
 related:
 - sourdough
 ---

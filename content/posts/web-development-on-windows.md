@@ -1,7 +1,7 @@
 ---
 title: Modern Web Development on Windows
 date: 2018-09-13
-notes:
+categories:
 - Dev
 ---
 
