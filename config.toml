@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "The notes of Jeremy Bise"
 
 pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [taxonomies]
     recipe = "recipes"

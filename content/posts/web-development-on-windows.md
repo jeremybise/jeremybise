@@ -102,4 +102,8 @@ All your dotfiles like `.zshrc`, etc will be in `~`, which is not really all tha
 
 I also ran into an issue logging into AWS because of permissions on my .pem file. This was because I had the file in /mnt/c/... and that uses Windows permissions and doesn't respect `chmod` so much. Instead, I just moved my .pem file over to my `~` directory and did `chmod`. That worked like a charm.
 
-The home directory for WSL Ubuntu is at `C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState`
+The home directory for WSL Ubuntu is at
+
+```shell
+C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
+```
