@@ -2,4 +2,8 @@
 title: About Jeremy
 ---
 
-Yeah, sorry - nothing here yet. Will get to it eventually!
+Hi, I'm Jeremy. I'm from Virginia. I like [code](/categories/dev/) and [food](/categories/recipes/).
+
+I have a Frank.
+
+{{< img "media/frank.jpg" "Frank" >}}
