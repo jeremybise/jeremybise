@@ -4,6 +4,7 @@ title = "The notes of Jeremy Bise"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+enableEmoji = true
 
 [taxonomies]
     recipe = "recipes"

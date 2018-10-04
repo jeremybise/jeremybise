@@ -36,4 +36,4 @@ related:
 ## Notes
 
 * They freeze well. Put a sheet of wax paper between each and store. To reheat, microwave for 30-60 seconds or put in a 375 degree oven until crisp and heated through.
-* Also makes bomb pancakes.
+* Also makes :fire: pancakes.
