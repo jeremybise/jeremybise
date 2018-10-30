@@ -1,19 +1,12 @@
-.main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1em;
+.page {
   @media (min-width: 768px) {
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 2em;
-    padding: 2em;
     display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-column-grap: 2em;
   }
 }
-.primary {
-
-}
-.sidebar {
-
+.main {
+  padding: 2em;
 }
 .featured-image {
   img {

@@ -1,54 +1,56 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
 
-    <link rel="shortcut icon" href="/favicon.ico" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" />
 
-    <title>{{ if .Title }} {{ .Title }} | {{ end}}{{ $.Site.Title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 
-    {{ if .Site.IsServer }}
-      {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
-      {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-    {{ else }}
-      {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
-      {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-    {{ end }}
+  <title>{{ if .Title }} {{ .Title }} | {{ end}}{{ $.Site.Title }}</title>
 
-    <link rel="pingback" href="https://webmention.io/jeremybise.com/xmlrpc" />
-    <link rel="webmention" href="https://webmention.io/jeremybise.com/webmention" />
+  {{ if .Site.IsServer }}
+  {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
+  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  {{ else }}
+  {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
+  {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ end }}
 
-    {{ block "header_scripts" . }}
-      <!-- Optional header scripts -->
-    {{ end }}
-  </head>
-  <body>
+  <link rel="pingback" href="https://webmention.io/jeremybise.com/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/jeremybise.com/webmention" />
 
+  {{ block "header_scripts" . }}
+  <!-- Optional header scripts -->
+  {{ end }}
+</head>
+
+<body>
+
+  <div class="page">
     {{ partial "header.html" . }}
 
     <div class="main">
       <div class="primary">
         {{ block "main" . }}
-          <!-- Main content here. -->
+        <!-- Main content here. -->
         {{ end }}
       </div>
 
       {{ block "sidebar" . }}
-        <!-- Sidebar content here. -->
+      <!-- Sidebar content here. -->
       {{ end }}
     </div>
+  </div>
 
-    {{ partial "footer.html" . }}
+  {{ block "footer_scripts" . }}
+  <!-- Optional footer scripts. -->
+  {{ end }}
+</body>
 
-    {{ block "footer_scripts" . }}
-      <!-- Optional footer scripts. -->
-    {{ end }}
-
-  </body>
 </html>

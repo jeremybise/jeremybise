@@ -1,10 +1,9 @@
-.article-summary {
+.article-summary .link {
   display: block;
   border-bottom: 1px solid $reallylight;
-  padding: 1em 0;
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: flex;
-    padding: 2em 0;
+    padding: 1em 0;
   }
   .featured-image-thumb img {
     max-width: 100%;
@@ -18,11 +17,14 @@
   .post {
     flex: 4;
     margin-right: 2em;
-    color: $light;
+    time {
+      color: $light;
+    }
     .entry-title {
       margin: 0;
       & a {
         display: block;
+        color: $accent;
       }
     }
   }
