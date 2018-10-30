@@ -1,13 +1,14 @@
 ---
 title: Modern Web Development on Windows
 date: 2018-09-13
+featured_image: "media/webdev-win.png"
 categories:
-- Dev
+  - Dev
 ---
 
 **NOTE: This is kind of a work in progress.**
 
-Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually *nice*.
+Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually _nice_.
 
 Here's how I went about it.
 
@@ -29,20 +30,24 @@ Once Hyper is installed, let’s edit the config to make Bash its default.
 
 Under Hyper preferences (CTRL + ,), set shell to:
 
-```shell
-shell: 'C:\\Windows\\System32\\bash.exe'
+```json
+{
+  ...
+  shell: 'C:\\Windows\\System32\\bash.exe'
+  ...
+}
 ```
 
 ### Install ZSH
 
-```shell
+```bash
 sudo apt-get install zsh
 vim ~/.bashrc
 ```
 
 Add the following to run ZSH when Bash starts:
 
-```shell
+```bash
 if [ -t 1 ]; then
 exec zsh
 fi
@@ -51,9 +56,10 @@ fi
 Relaunch Hyper and choose option 2.
 
 ### Install Oh My ZSH
+
 Run the following:
 
-```shell
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -65,7 +71,7 @@ Finally, I personally like dark colors for my terminal and development. Hyper Sn
 
 Lastly, the only hideous thing is the directory listings. Add the following shit to the bottom of your `.zshrc` file.
 
-```shell
+```bash
 # Change ls colors
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
@@ -81,7 +87,7 @@ Relaunch Hyper. Directories are now pretty.
 
 ### Install Git
 
-```shell
+```bash
 sudo apt-get install git
 ```
 
@@ -89,11 +95,12 @@ sudo apt-get install git
 
 For code editing, you can't go wrong with [Visual Studio Code](https://code.visualstudio.com/). I set Fira Code as my font of choice and we set VS code's integrated terminal to use WSL bash instead of PowerShell. In `settings.json`, that looks like this:
 
-```shell
+```json
 "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
 ```
 
 # A Note on Directories
+
 The directories in WSL confused the shit out of me, but I finally figured it out. Here's how I believe it should be used.
 
 For your code and projects, use `/mnt/c/Users/<username>`. This directory is directly accessible in Windows so you can use different Windows code editors, etc.
@@ -104,6 +111,6 @@ I also ran into an issue logging into AWS because of permissions on my .pem file
 
 The home directory for WSL Ubuntu is at
 
-```shell
+```bash
 C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
 ```
