@@ -1,8 +1,6 @@
 .page {
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-column-grap: 2em;
+    margin-left: 280px;
   }
 }
 .main {

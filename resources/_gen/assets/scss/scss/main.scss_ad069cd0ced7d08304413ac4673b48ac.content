@@ -299,9 +299,7 @@ template {
 
 @media (min-width: 768px) {
   .page {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-column-grap: 2em; } }
+    margin-left: 280px; } }
 
 .main {
   padding: 2em; }
@@ -348,38 +346,47 @@ hr {
   margin-top: 0;
   margin-bottom: 0; }
 
+.article-header {
+  text-align: center; }
+
 .global-header {
+  position: relative;
   padding: 1em;
   color: #90A4AE;
   background: #37474F; }
   @media (min-width: 768px) {
     .global-header {
       padding: 1em 2em;
-      min-height: 100vh; } }
+      min-height: 100vh;
+      position: fixed;
+      width: 200px; } }
 
-.logo {
-  text-align: center; }
+@media (min-width: 768px) {
+  .logo {
+    text-align: center;
+    margin: 2em 1em; } }
+
+.logo svg {
+  width: 75px;
+  height: 75px; }
+  .logo svg .logo-fill {
+    fill: #90A4AE;
+    transition: 0.2s linear; }
   @media (min-width: 768px) {
-    .logo {
-      margin: 2em 1em; } }
-  .logo svg {
-    width: 75px;
-    height: 75px; }
-    .logo svg .logo-fill {
-      fill: #FFFFFF;
-      transition: 0.2s linear; }
-    @media (min-width: 768px) {
-      .logo svg {
-        width: 125px;
-        height: 125px; } }
-    .logo svg:hover .logo-fill {
-      fill: #DB2C17; }
+    .logo svg {
+      width: 125px;
+      height: 125px; } }
+  .logo svg:hover .logo-fill {
+    fill: #FFFFFF; }
 
 .extra {
   display: none; }
   @media (min-width: 768px) {
     .extra {
       display: block; } }
+
+.extra.is-visible {
+  display: block; }
 
 .global-nav {
   align-self: center;
@@ -394,7 +401,43 @@ hr {
       padding: 10px;
       color: #90A4AE; }
       .global-nav ul li a:hover {
-        color: #DB2C17; }
+        color: #FFFFFF; }
+
+.menu-button {
+  position: absolute;
+  right: 20px;
+  top: 40px; }
+  @media (min-width: 768px) {
+    .menu-button {
+      display: none; } }
+  .menu-button span {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out; }
+  .menu-button span:nth-child(1) {
+    top: 0px; }
+  .menu-button span:nth-child(2) {
+    top: 10px; }
+  .menu-button span:nth-child(3) {
+    top: 20px; }
+  .menu-button a {
+    display: block;
+    padding: 5px; }
+  .menu-button .is-visible span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%; }
+  .menu-button .is-visible span:nth-child(2) {
+    top: 10px;
+    transform: rotate(45deg); }
+  .menu-button .is-visible span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg); }
 
 .sidebar {
   margin-top: 1em; }

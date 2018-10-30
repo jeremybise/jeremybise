@@ -31,10 +31,9 @@
 </head>
 
 <body>
+  {{ partial "header.html" . }}
 
   <div class="page">
-    {{ partial "header.html" . }}
-
     <div class="main">
       <div class="primary">
         {{ block "main" . }}
@@ -51,6 +50,7 @@
   {{ block "footer_scripts" . }}
   <!-- Optional footer scripts. -->
   {{ end }}
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
