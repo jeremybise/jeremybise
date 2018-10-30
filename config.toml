@@ -17,9 +17,3 @@ includeNewer = true
 [[related.indices]]
 name = "related"
 weight = 150
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.50"
-
-[context.production.environment]
-  HUGO_VERSION = "0.50"
