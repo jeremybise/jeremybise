@@ -4,12 +4,14 @@
       {{ partial "logo" }}
     </a>
   </div>
-  <nav class="global-nav">
-    <ul>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/categories/recipes/">Recipes</a></li>
-      <li><a href="/categories/dev/">Dev</a></li>
-    </ul>
-  </nav>
-  {{ partial "footer.html" . }}
+  <div class="extra">
+    <nav class="global-nav">
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/categories/recipes/">Recipes</a></li>
+        <li><a href="/categories/dev/">Dev</a></li>
+      </ul>
+    </nav>
+    {{ partial "footer.html" . }}
+  </div>
 </header>

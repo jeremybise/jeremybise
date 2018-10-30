@@ -349,25 +349,37 @@ hr {
   margin-bottom: 0; }
 
 .global-header {
-  padding: 2em;
-  color: #90A4AE; }
+  padding: 1em;
+  color: #90A4AE;
+  background: #37474F; }
   @media (min-width: 768px) {
     .global-header {
       padding: 1em 2em;
-      min-height: 100vh;
-      background: #37474F; } }
+      min-height: 100vh; } }
 
 .logo {
-  text-align: center;
-  margin: 2em 1em; }
+  text-align: center; }
+  @media (min-width: 768px) {
+    .logo {
+      margin: 2em 1em; } }
   .logo svg {
-    width: 125px;
-    height: 125px; }
+    width: 75px;
+    height: 75px; }
     .logo svg .logo-fill {
       fill: #FFFFFF;
       transition: 0.2s linear; }
+    @media (min-width: 768px) {
+      .logo svg {
+        width: 125px;
+        height: 125px; } }
     .logo svg:hover .logo-fill {
       fill: #DB2C17; }
+
+.extra {
+  display: none; }
+  @media (min-width: 768px) {
+    .extra {
+      display: block; } }
 
 .global-nav {
   align-self: center;
@@ -404,6 +416,11 @@ footer {
   padding: 1em;
   font-size: 0.7em;
   text-align: center; }
+  footer a {
+    color: #FFFFFF;
+    padding: .25em; }
+    footer a:hover {
+      color: #DB2C17; }
 
 .avatars {
   list-style: none;
@@ -418,21 +435,30 @@ footer {
 
 .article-summary .link {
   display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1em 0;
+  text-align: center; }
   @media (min-width: 768px) {
     .article-summary .link {
       display: flex;
-      padding: 1em 0; } }
+      text-align: left; } }
   .article-summary .link .featured-image-thumb img {
-    max-width: 100%;
+    max-width: 125px;
     border-radius: 50%; }
+    @media (min-width: 768px) {
+      .article-summary .link .featured-image-thumb img {
+        max-width: 100%; } }
   .article-summary .link .meta {
     flex: 1;
-    color: #90A4AE;
-    margin-right: 2em; }
+    color: #90A4AE; }
+    @media (min-width: 768px) {
+      .article-summary .link .meta {
+        margin-right: 2em; } }
   .article-summary .link .post {
-    flex: 4;
-    margin-right: 2em; }
+    flex: 4; }
+    @media (min-width: 768px) {
+      .article-summary .link .post {
+        margin-right: 2em; } }
     .article-summary .link .post time {
       color: #90A4AE; }
     .article-summary .link .post .entry-title {

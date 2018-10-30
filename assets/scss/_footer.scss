@@ -3,4 +3,11 @@ footer {
   padding: 1em;
   font-size: 0.7em;
   text-align: center;
+  a {
+    color: $white;
+    padding: .25em;
+    &:hover {
+      color: $accent;
+    }
+  }
 }

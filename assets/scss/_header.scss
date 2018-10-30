@@ -1,28 +1,41 @@
 .global-header {
-  padding: 2em;
+  padding: 1em;
   color: $light;
+  background: #37474F;
   @media (min-width: 768px) {
     padding: 1em 2em;
     min-height: 100vh;
-    background: #37474F;
   }
 }
 
 .logo {
   text-align: center;
-  margin: 2em 1em;
+  @media (min-width: 768px) {
+    margin: 2em 1em;
+  }
   svg {
-    width: 125px;
-    height: 125px;
+    width: 75px;
+    height: 75px;
     .logo-fill {
       fill: $white;
       transition: 0.2s linear;
+    }
+    @media (min-width: 768px) {
+      width: 125px;
+      height: 125px;
     }
     &:hover {
       .logo-fill {
         fill: $accent;
       }
     }
+  }
+}
+
+.extra {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
   }
 }
 

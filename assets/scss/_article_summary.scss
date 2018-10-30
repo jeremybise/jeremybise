@@ -1,22 +1,31 @@
 .article-summary .link {
   display: block;
   border-bottom: 1px solid $reallylight;
+  padding: 1em 0;
+  text-align: center;
   @media (min-width: 768px) {
     display: flex;
-    padding: 1em 0;
+    text-align: left;
   }
   .featured-image-thumb img {
-    max-width: 100%;
+    max-width: 125px;
     border-radius: 50%;
+    @media (min-width: 768px) {
+      max-width: 100%;
+    }
   }
   .meta {
     flex: 1;
     color: $light;
-    margin-right: 2em;
+    @media (min-width: 768px) {
+      margin-right: 2em;
+    }
   }
   .post {
     flex: 4;
-    margin-right: 2em;
+    @media (min-width: 768px) {
+      margin-right: 2em;
+    }
     time {
       color: $light;
     }
