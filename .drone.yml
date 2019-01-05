@@ -1,26 +1,19 @@
-pipeline:
-  build:
-    image: alpine
-    commands:
-      - apk add ca-certificates
-      - wget https://github.com/gohugoio/hugo/releases/download/v0.47.1/hugo_0.47.1_Linux-64bit.tar.gz
-      - tar xzf hugo_0.47.1_Linux-64bit.tar.gz -C /usr/local/bin/
-      - rm hugo_0.47.1_Linux-64bit.tar.gz
-      - hugo version
-      - hugo
-  publish:
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+    image: cbrgm/drone-hugo:latest
+  - name: publish
     image: cschlosser/drone-ftps
-    hostname: my.thosegeeks.com
-    secrets: [ ftp_username, ftp_password ]
-    clear_dir: true
-    dest_dir: /httpdocs
-    src_dir: /public
-    secure: false
-  cache:
-    image: waracle/cloudflare
     environment:
-      - CF_API_KEY=$CF_API_KEY
-      - CF_API_EMAIL=$CF_API_EMAIL
-      - CF_API_DOMAIN=jeremybise.com
-    commands:
-      - cfcli purge
+      FTP_USERNAME:
+        from_secret: ftp_username
+      FTP_PASSWORD:
+        from_secret: ftp_password
+      PLUGIN_HOSTNAME: jeremybise.com:21
+      PLUGIN_SECURE: false
+      PLUGIN_VERIFY: false
+      PLUGIN_SRC_DIR: /public
+      PLUGIN_DEST_DIR: /httpdocs
+      PLUGIN_CLEAN_DIR: true

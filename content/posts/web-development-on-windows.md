@@ -1,12 +1,10 @@
 ---
-title: Modern Web Development on Windows
+title: Setting Up Windows Subsystem Linux (WSL) for Modern Web Development on Windows
 date: 2018-09-13
 featured_image: "media/webdev-win.png"
 categories:
   - Dev
 ---
-
-**NOTE: This is kind of a work in progress.**
 
 Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually _nice_.
 
@@ -28,7 +26,7 @@ First, let’s install [Hyper.js](https://hyper.is/). It is a much better lookin
 
 Once Hyper is installed, let’s edit the config to make Bash its default.
 
-Under Hyper preferences (CTRL + ,), set shell to:
+Under Hyper preferences `(CTRL + ,)`, set shell to:
 
 ```json
 {
@@ -40,14 +38,15 @@ Under Hyper preferences (CTRL + ,), set shell to:
 
 ### Install ZSH
 
-```bash
+[ZSH](http://www.zsh.org/) is a more modern shell and I prefer it over Bash. ZSH can be installed via `apt-get`.
+
+```sh
 sudo apt-get install zsh
-vim ~/.bashrc
 ```
 
-Add the following to run ZSH when Bash starts:
+Add the following to `~/.bashrc` to run ZSH when Bash starts:
 
-```bash
+```sh
 if [ -t 1 ]; then
 exec zsh
 fi
@@ -57,21 +56,21 @@ Relaunch Hyper and choose option 2.
 
 ### Install Oh My ZSH
 
-Run the following:
+We already have a big improvment over the default shell, but if we install [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh), we get additional niceties to make the development experience that much better. Run the following:
 
-```bash
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ### Get a Decent Font
 
-Now that we have a familiar shell, I hate the font. I like [Fira Code](https://github.com/tonsky/FiraCode). Download Fira Code and install it into Windows and then set the default font in Hyper (CTRL + ,).
+Now that we have a familiar shell, I hate the font. I like [Fira Code](https://github.com/tonsky/FiraCode). Download Fira Code and install it into Windows and then set the default font in Hyper `(CTRL + ,)`.
 
-Finally, I personally like dark colors for my terminal and development. Hyper Snazzy looks pretty damn good to me.
+Finally, I like dark colors for my terminal and development. [Hyper Material Theme](https://hyper.is/plugins/hyper-material-theme) does the trick for me.
 
 Lastly, the only hideous thing is the directory listings. Add the following shit to the bottom of your `.zshrc` file.
 
-```bash
+```sh
 # Change ls colors
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
@@ -83,15 +82,21 @@ compinit
 
 Relaunch Hyper. Directories are now pretty.
 
+The couple things I wish Hyper did (but will do soon hopefully) are allowing us to adjust the line height (it's too squished) and making color themes work correctly for VIM. VIM works great - but the colors are nowhere near right.
+
 ## Development Setup
 
-### Install Git
+### Git
 
-```bash
+```sh
 sudo apt-get install git
 ```
 
-## Editor
+### Node & NPM
+
+At this point, unless you absolutely need NVM, I'd recommend not installing it in WSL. It. Is. Ridicuously. Slow. Instead, install Node per the [installation instructions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages) on their site.
+
+### Editor
 
 For code editing, you can't go wrong with [Visual Studio Code](https://code.visualstudio.com/). I set Fira Code as my font of choice and we set VS code's integrated terminal to use WSL bash instead of PowerShell. In `settings.json`, that looks like this:
 
@@ -101,16 +106,16 @@ For code editing, you can't go wrong with [Visual Studio Code](https://code.visu
 
 # A Note on Directories
 
-The directories in WSL confused the shit out of me, but I finally figured it out. Here's how I believe it should be used.
+The directories in WSL initially confused the shit out of me, but here's the skinny:
 
-For your code and projects, use `/mnt/c/Users/<username>`. This directory is directly accessible in Windows so you can use different Windows code editors, etc.
+### For your code (and anything else you want to work on with a Windows Application like VS Code)
 
-All your dotfiles like `.zshrc`, etc will be in `~`, which is not really all that editable in Windows.
+When working in the Linux shell, save your projects in `/mnt/c/Users/<username>`. This directory is mounted to your Windows user directory so that applications like VS Code for Windows can work with the files.
 
-I also ran into an issue logging into AWS because of permissions on my .pem file. This was because I had the file in /mnt/c/... and that uses Windows permissions and doesn't respect `chmod` so much. Instead, I just moved my .pem file over to my `~` directory and did `chmod`. That worked like a charm.
+### For all your Linux-related stuff (like dotfiles)
 
-The home directory for WSL Ubuntu is at
+All your dotfiles like `.zshrc`, etc will be in your `~` (home) directory in Linux, which is NOT something you should try to edit in Windows. Use `vim` or `nano` within the shell to edit these things.
 
-```bash
-C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState
-```
+## The end?
+
+This has made for a pleasant development experience for me. Except when working with WordPress, I don't really miss my Mac so much. I'll update as time goes on.
