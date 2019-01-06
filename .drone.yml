@@ -3,7 +3,7 @@ name: default
 
 steps:
   - name: build
-    image: jeremybise/hugo-build-053:latest
+    image: cbrgm/drone-hugo:latest
   - name: publish
     image: cschlosser/drone-ftps
     environment:
