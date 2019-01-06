@@ -363,6 +363,14 @@ hr {
       position: fixed;
       width: 200px; } }
 
+.global-search input {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 14px;
+  padding: 5px; }
+
 @media (min-width: 768px) {
   .logo {
     text-align: center;

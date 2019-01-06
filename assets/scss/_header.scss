@@ -10,7 +10,17 @@
     width: 200px;
   }
 }
+.global-search {
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 14px;
+    padding: 5px;
+  }
 
+}
 .logo {
   @media (min-width: 768px) {
     text-align: center;
