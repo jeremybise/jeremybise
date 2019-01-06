@@ -104,7 +104,7 @@ For code editing, you can't go wrong with [Visual Studio Code](https://code.visu
 "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
 ```
 
-# A Note on Directories
+## A Note on Directories
 
 The directories in WSL initially confused the shit out of me, but here's the skinny:
 
