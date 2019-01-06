@@ -14,7 +14,7 @@ steps:
   - name: publish_index
     image: byrnedo/alpine-curl
     commands:
-      - curl -H "Content-Type: application/x-ndjson" -XPOST "https://elasticsearch.thosegeeks.com/index/type/_bulk" --data-binary "@./public/elasticsearch.json"
+      - > curl -H "Content-Type: application/x-ndjson" -XPOST "https://elasticsearch.thosegeeks.com/index/type/_bulk" --data-binary "@./public/elasticsearch.json"
   - name: publish_site
     image: cschlosser/drone-ftps
     environment:
