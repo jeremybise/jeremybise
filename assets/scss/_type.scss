@@ -4,9 +4,12 @@ body {
   overflow-wrap: break-word; /* newer syntax standard that replaces word-wrap */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   text-transform: uppercase;
-  line-height: 1em;
+  line-height: 1.4;
+}
+h2, h3, h4, h5, h6 {
+  line-height: 1.4;
 }
 
 pre {
@@ -39,4 +42,5 @@ hr {
 
 .article-header {
   text-align: center;
+  margin-bottom: 2em;
 }
