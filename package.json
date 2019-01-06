@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "index": "hugo-elasticsearch -l yaml"
+    "algolia": "atomic-algolia"
   },
   "dependencies": {
-    "hugo-elasticsearch": "^1.1.4"
+    "atomic-algolia": "^0.3.17"
   }
 }
