@@ -4,6 +4,8 @@ name: default
 steps:
   - name: build
     image: cbrgm/drone-hugo:latest
+    environment:
+      PLUGIN_HUGO_VERSION: 0.53
   - name: publish
     image: cschlosser/drone-ftps
     environment:
