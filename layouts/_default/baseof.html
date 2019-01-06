@@ -1,25 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ $.Site.Language.Lang }}">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="/">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
 
   <link rel="shortcut icon" href="/favicon.ico" />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" />
 
-  <title>{{ if .Title }} {{ .Title }} | {{ end}}{{ $.Site.Title }}</title>
+  <title>{{ if .Title }} {{ .Title }} | {{ end }}{{ $.Site.Title }}</title>
 
   {{ if .Site.IsServer }}
   {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
   {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
   {{ else }}
   {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
   {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" />
   {{ end }}
 
   <link rel="pingback" href="https://webmention.io/jeremybise.com/xmlrpc" />

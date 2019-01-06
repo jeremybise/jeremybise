@@ -23,14 +23,18 @@
   }
   .post {
     flex: 4;
+    align-self: center;
     @media (min-width: 768px) {
       margin-right: 2em;
     }
     time {
+      display: none;
       color: $light;
     }
     .entry-title {
       margin: 0;
+      font-size: 1.4em;
+      line-height: 1.2;
       & a {
         display: block;
         color: $accent;

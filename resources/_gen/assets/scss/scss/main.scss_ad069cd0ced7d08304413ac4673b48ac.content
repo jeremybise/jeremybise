@@ -354,7 +354,7 @@ hr {
 .global-header {
   position: relative;
   padding: 1em;
-  color: #90A4AE;
+  color: #90a4ae;
   background: #263238; }
   @media (min-width: 768px) {
     .global-header {
@@ -369,17 +369,17 @@ hr {
     margin: 2em 1em; } }
 
 .logo svg {
-  width: 75px;
-  height: 75px; }
+  width: 50px;
+  height: 50px; }
   .logo svg .logo-fill {
-    fill: #90A4AE;
+    fill: #90a4ae;
     transition: 0.2s linear; }
   @media (min-width: 768px) {
     .logo svg {
       width: 125px;
       height: 125px; } }
   .logo svg:hover .logo-fill {
-    fill: #FFFFFF; }
+    fill: #ffffff; }
 
 .extra {
   display: none; }
@@ -401,14 +401,14 @@ hr {
       font-size: 1em;
       text-transform: uppercase;
       padding: 10px;
-      color: #90A4AE; }
+      color: #90a4ae; }
       .global-nav ul li a:hover {
-        color: #FFFFFF; }
+        color: #ffffff; }
 
 .menu-button {
   position: absolute;
   right: 20px;
-  top: 40px; }
+  top: 30px; }
   @media (min-width: 768px) {
     .menu-button {
       display: none; } }
@@ -416,7 +416,7 @@ hr {
     display: block;
     height: 3px;
     width: 30px;
-    background: #FFFFFF;
+    background: #ffffff;
     margin-bottom: 5px;
     left: 0;
     transform: rotate(0deg);
@@ -454,7 +454,7 @@ hr {
     padding: 0; }
   .sidebar h3 {
     margin-top: 0;
-    color: #90A4AE; }
+    color: #90a4ae; }
 
 footer {
   margin: auto;
@@ -462,7 +462,7 @@ footer {
   font-size: 0.7em;
   text-align: center; }
   footer a {
-    color: #FFFFFF;
+    color: #ffffff;
     padding: .25em; }
     footer a:hover {
       color: #bf360c; }
@@ -495,19 +495,23 @@ footer {
         max-width: 100%; } }
   .article-summary .link .meta {
     flex: 1;
-    color: #90A4AE; }
+    color: #90a4ae; }
     @media (min-width: 768px) {
       .article-summary .link .meta {
         margin-right: 2em; } }
   .article-summary .link .post {
-    flex: 4; }
+    flex: 4;
+    align-self: center; }
     @media (min-width: 768px) {
       .article-summary .link .post {
         margin-right: 2em; } }
     .article-summary .link .post time {
-      color: #90A4AE; }
+      display: none;
+      color: #90a4ae; }
     .article-summary .link .post .entry-title {
-      margin: 0; }
+      margin: 0;
+      font-size: 1.4em;
+      line-height: 1.2; }
       .article-summary .link .post .entry-title a {
         display: block;
         color: #bf360c; }

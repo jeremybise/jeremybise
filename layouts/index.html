@@ -1,5 +1,2 @@
-{{ define "main" }}
-  {{ range where .Site.RegularPages "Section" "posts" }}
-    {{ partial "article-summary" . }}
-  {{ end }}
-{{ end }}
+{{ define "main" }} {{ range where .Site.RegularPages "Section" "posts" }}
+{{ partial "article-summary" . }} {{ end }} {{ end }}
