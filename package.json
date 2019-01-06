@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "index": "hugo-elasticsearch -l yaml"
+  },
+  "dependencies": {
+    "hugo-elasticsearch": "^1.1.4"
+  }
+}

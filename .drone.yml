@@ -6,7 +6,16 @@ steps:
     image: plugins/hugo:latest
     environment:
       PLUGIN_HUGO_VERSION: 0.53
-  - name: publish
+  - name: index
+    image: node
+    commands:
+      - npm install
+      - npm run index
+  - name: publish_index
+    image: byrnedo/alpine-curl
+    commands:
+      - curl -H "Content-Type: application/x-ndjson" -XPOST "https://elasticsearch.thosegeeks.com/index/type/_bulk" --data-binary "@./public/elasticsearch.json"
+  - name: publish_site
     image: cschlosser/drone-ftps
     environment:
       FTP_USERNAME:

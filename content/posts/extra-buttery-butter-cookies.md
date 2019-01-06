@@ -1,6 +1,6 @@
 ---
 title: Extra Buttery Butter Cookies
-date: 2018-11-30T17:41:13+00:00
+date: 2018-11-30
 featured_image: "media/IMG_1002.jpg"
 categories:
   - recipes
