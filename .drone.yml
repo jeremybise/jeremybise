@@ -10,11 +10,7 @@ steps:
     image: node
     commands:
       - npm install
-      - npm run index
-  - name: publish_index
-    image: byrnedo/alpine-curl
-    commands:
-      - > curl -H "Content-Type: application/x-ndjson" -XPOST "https://elasticsearch.thosegeeks.com/index/type/_bulk" --data-binary "@./public/elasticsearch.json"
+      - npm run algolia
   - name: publish_site
     image: cschlosser/drone-ftps
     environment:
