@@ -315,6 +315,9 @@ figure {
 figure img {
   max-width: 100%; }
 
+html {
+  font-size: 16px; }
+
 body {
   color: #333333;
   word-wrap: break-word;
@@ -322,18 +325,25 @@ body {
   overflow-wrap: break-word;
   /* newer syntax standard that replaces word-wrap */ }
 
-h1 {
-  text-transform: uppercase;
-  line-height: 1.4; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.250em 0 0.64em;
+  line-height: 1.2;
+  font-weight: 400; }
 
-h2, h3, h4, h5, h6 {
-  line-height: 1.4; }
+h1 {
+  margin-top: 0;
+  font-size: 2.441em; }
+
+h2 {
+  font-size: 1.563em; }
+
+h3 {
+  font-size: 1.25em; }
 
 pre {
   padding: .5em; }
 
 pre > code {
-  font-size: 16px;
   white-space: pre-wrap; }
 
 hr {
