@@ -3,6 +3,10 @@
   border-bottom: 1px solid $reallylight;
   padding: 1em 0;
   text-align: center;
+  color: $text;
+  &:hover {
+    color: $accent;
+  }
   @media (min-width: 768px) {
     display: flex;
     text-align: left;
@@ -37,7 +41,6 @@
       line-height: 1.2;
       & a {
         display: block;
-        color: $accent;
       }
     }
   }
