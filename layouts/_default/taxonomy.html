@@ -1,8 +1,5 @@
 {{ define "main" }}
-  <h1 class="entry-title">{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
+<h1 class="entry-title">{{ .Title }}</h1>
+{{ range where .Pages "Section" "posts" }}
+{{ partial "article-summary" . }} {{ end }}
 {{ end }}
