@@ -484,10 +484,10 @@ footer {
   font-size: 0.7em;
   text-align: center; }
   footer a {
-    color: #ffffff;
+    color: #90a4ae;
     padding: .25em; }
     footer a:hover {
-      color: #bf360c; }
+      color: #ffffff; }
 
 .avatars {
   list-style: none;
@@ -504,7 +504,10 @@ footer {
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1em 0;
-  text-align: center; }
+  text-align: center;
+  color: #333333; }
+  .article-summary .link:hover {
+    color: #bf360c; }
   @media (min-width: 768px) {
     .article-summary .link {
       display: flex;
@@ -535,8 +538,7 @@ footer {
       font-size: 1.4em;
       line-height: 1.2; }
       .article-summary .link .post .entry-title a {
-        display: block;
-        color: #bf360c; }
+        display: block; }
 
 /* Background */
 .chroma {
