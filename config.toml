@@ -18,6 +18,9 @@ includeNewer = true
 name = "related"
 weight = 150
 
+[permalinks]
+posts = "/:title"
+
 [outputFormats.Algolia]
 baseName = "algolia"
 isPlainText = true
