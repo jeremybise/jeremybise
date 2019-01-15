@@ -17,6 +17,9 @@ fields:
   label: Featured Image
   name: featured_image
 - type: tag_list
+  name: categories
+  label: Categories
+- type: tag_list
   name: related
   label: Related
 pages:
