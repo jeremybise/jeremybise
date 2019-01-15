@@ -19,3 +19,5 @@ fields:
 - type: tag_list
   name: related
   label: Related
+pages:
+- content/posts/sourdough-waffles.md
