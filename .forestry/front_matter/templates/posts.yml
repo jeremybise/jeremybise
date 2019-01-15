@@ -1,0 +1,21 @@
+---
+label: Posts
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: file
+  label: Featured Image
+  name: featured_image
+- type: tag_list
+  name: related
+  label: Related
