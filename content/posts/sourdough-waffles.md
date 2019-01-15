@@ -1,13 +1,13 @@
 ---
 title: Sourdough Waffles + Pancakes
-featured_image: "media/sourdoughwaffles.jpg"
-date: 2018-08-24
+featured_image: media/sourdoughwaffles.jpg
+date: 2018-08-24 00:00:00 +0000
 categories:
 - Recipes
 related:
 - sourdough
----
 
+---
 ## Overnight Sponge
 
 * 2 cups unbleached all purpose flour
