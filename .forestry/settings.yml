@@ -14,6 +14,8 @@ sections:
   label: Posts
   create: all
   match: "**/*"
+  templates:
+  - posts
 upload_dir: assets/media
 public_path: "/media"
 front_matter_path: ''
