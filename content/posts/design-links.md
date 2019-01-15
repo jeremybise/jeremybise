@@ -1,8 +1,7 @@
 +++
 categories = ["Design"]
 date = "2019-01-15T00:00:00-05:00"
-draft = true
-featured_image = ""
+featured_image = "/media/design-resources.png"
 related = []
 title = "Design Links"
 
