@@ -4,13 +4,49 @@
   }
 }
 .main {
-  padding: 2em;
-  max-width: 60rem;
+  padding: 0 2em 0 2em;
+
   margin: auto;
+  @media (min-width: 768px) {
+    padding: 2em;
+    max-width: 60rem;
+  }
 }
 .featured-image {
+  position: relative;
+  margin-bottom: 2em;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
   img {
     max-width: 100%;
+    z-index: 1;
+  }
+  .article-header {
+    margin-top: 2em;
+    @media (min-width: 768px) {
+      margin-top: 0;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.7);
+      color: $white;
+      padding: 2em;
+      width: 80%;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
 

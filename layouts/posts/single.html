@@ -1,30 +1,32 @@
 {{ define "main" }}
 <article class="h-entry">
-  <div class="article-header">
-    <h1 class="p-name">{{ .Title }}</h1>
-    <p class="post-meta">
-      <a class="u-url" href="{{ .Permalink }}">
-        Published <time class="dt-published">{{ .PublishDate.Format "January 2, 2006" }}</time>
-      </a> by
-      <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
-    </p>
-  </div>
-
-  {{ with .Params.featured_image }}
-  {{ $img := resources.Get . }}
-  {{ $image := ($img.Fill "1200x800") }}
   <div class="featured-image">
+    {{ with .Params.featured_image }}
+    {{ $img := resources.Get . }}
+    {{ $image := ($img.Fill "1200x600") }}
     <img src="{{ $image.RelPermalink }}" />
+    {{ end }}
+    <div class="article-header">
+      <h1 class="p-name">{{ .Title }}</h1>
+      <p class="post-meta">
+        <a class="u-url" href="{{ .Permalink }}">
+          Published <time class="dt-published">{{ .PublishDate.Format "January 2, 2006" }}</time>
+        </a> by
+        <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
+      </p>
+    </div>
   </div>
-  {{ end }}
 
-  <div class="e-content">
-    {{ .Content }}
+
+  <div class="main">
+    <div class="e-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "webmention_form.html" . }}
+
+    {{ partial "webmentions.html" . }}
   </div>
-
-  {{ partial "webmention_form.html" . }}
-
-  {{ partial "webmentions.html" . }}
 </article>
 {{ end }}
 
