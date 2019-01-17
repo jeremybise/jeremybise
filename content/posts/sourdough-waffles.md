@@ -1,7 +1,7 @@
 ---
 title: Sourdough Waffles + Pancakes
 featured_image: media/sourdoughwaffles.jpg
-date: 2018-08-24 00:00:00 +0000
+date: 2018-08-23 20:00:00 -0400
 categories:
 - Recipes
 related:
