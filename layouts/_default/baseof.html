@@ -38,17 +38,9 @@
   {{ partial "header.html" . }}
 
   <div class="page">
-    <div class="main">
-      <div class="primary">
-        {{ block "main" . }}
-        <!-- Main content here. -->
-        {{ end }}
-      </div>
-
-      {{ block "sidebar" . }}
-      <!-- Sidebar content here. -->
-      {{ end }}
-    </div>
+    {{ block "main" . }}
+    <!-- Main content here. -->
+    {{ end }}
   </div>
 
   {{ block "footer_scripts" . }}
