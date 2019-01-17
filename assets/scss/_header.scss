@@ -1,8 +1,8 @@
 .global-header {
   position: relative;
   padding: 1em;
-  color: $light;
-  background: #263238;
+  color: $rawSienna;
+  background: $woodyBrown;
   @media (min-width: 768px) {
     padding: 1em 2em;
     min-height: 100vh;
@@ -18,6 +18,7 @@
     margin-top: 2em;
     font-size: 14px;
     padding: 5px;
+    background: $pearlBush;
   }
 
 }
@@ -30,12 +31,12 @@
     width: 50px;
     height: 50px;
     .logo-fill {
-      fill: $light;
+      fill: $rawSienna;
       transition: 0.2s linear;
     }
     @media (min-width: 768px) {
-      width: 125px;
-      height: 125px;
+      width: 100px;
+      height: 100px;
     }
     &:hover {
       .logo-fill {
@@ -67,7 +68,7 @@
         font-size: 1em;
         text-transform: uppercase;
         padding: 10px;
-        color: $light;
+        color: $rawSienna;
         &:hover {
           color: $white;
         }
