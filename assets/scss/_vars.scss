@@ -1,8 +1,14 @@
-$background: #eceff1;
-$text: #333333;
-$accent: #bf360c;
-$white: #ffffff;
-$light: #90a4ae;
+$pearlBush: #e5e0ce;
+$osloGray: #82898f;
+$rawSienna: #c98343;
+$santaFe: #ba755f;
+$woodyBrown: #3b2f30;
+
+$background: $pearlBush;
+$text: $woodyBrown;
+$accent: $rawSienna;
+$white: $pearlBush;
+$light: $osloGray;
 $reallylight: rgba(0, 0, 0, 0.1);
 
 $bodyFont: "Muli";
