@@ -1,15 +1,14 @@
 .page {
   @media (min-width: 768px) {
-    margin-left: 280px;
+    margin-left: 272px;
   }
 }
 .main {
-  padding: 0 2em 0 2em;
-
+  padding: 0 1em 0 1em;
   margin: auto;
   @media (min-width: 768px) {
     padding: 2em;
-    max-width: 60rem;
+    max-width: 40rem;
   }
 }
 .featured-image {
