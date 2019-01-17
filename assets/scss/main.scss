@@ -10,12 +10,7 @@
 @import "syntax";
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.618;
   background: $background;
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
 }
 a {
   color: $accent;
