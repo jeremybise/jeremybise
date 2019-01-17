@@ -299,15 +299,15 @@ template {
 
 @media (min-width: 768px) {
   .page {
-    margin-left: 280px; } }
+    margin-left: 272px; } }
 
 .main {
-  padding: 0 2em 0 2em;
+  padding: 0 1em 0 1em;
   margin: auto; }
   @media (min-width: 768px) {
     .main {
       padding: 2em;
-      max-width: 60rem; } }
+      max-width: 40rem; } }
 
 .featured-image {
   position: relative;
@@ -346,7 +346,9 @@ figure img {
   max-width: 100%; }
 
 html {
-  font-size: 16px; }
+  font-size: 18px;
+  font-family: "Muli";
+  line-height: 1.5; }
 
 body {
   color: #3b2f30;
@@ -823,12 +825,7 @@ footer {
   color: #268bd2; }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.618;
   background: #e5e0ce; }
-  @media (min-width: 768px) {
-    body {
-      font-size: 20px; } }
 
 a {
   color: #c98343;

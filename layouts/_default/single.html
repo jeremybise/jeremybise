@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="main">
   <article class="h-entry">
     <h1 class="p-name entry-title">{{ .Title }}</h1>
 
@@ -8,9 +9,5 @@
 
     {{ partial "webmentions.html" . }}
   </article>
-{{ end }}
-
-{{ define "sidebar" }}
-  <div class="sidebar">
-  </div>
+</div>
 {{ end }}
