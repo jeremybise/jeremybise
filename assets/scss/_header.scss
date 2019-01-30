@@ -31,7 +31,7 @@
     width: 50px;
     height: 50px;
     .logo-fill {
-      fill: $rawSienna;
+      fill: $pearlBush;
       transition: 0.2s linear;
     }
     @media (min-width: 768px) {
@@ -40,7 +40,7 @@
     }
     &:hover {
       .logo-fill {
-        fill: $white;
+        fill: $rawSienna;
       }
     }
   }
@@ -68,9 +68,9 @@
         font-size: 1em;
         text-transform: uppercase;
         padding: 10px;
-        color: $rawSienna;
+        color: $pearlBush;
         &:hover {
-          color: $white;
+          color: $rawSienna;
         }
       }
     }

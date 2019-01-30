@@ -3,11 +3,12 @@ footer {
   padding: 1em;
   font-size: 0.7em;
   text-align: center;
+  color: $pearlBush;
   a {
-    color: $rawSienna;
+    color: $pearlBush;
     padding: .25em;
     &:hover {
-      color: $white;
+      color: $rawSienna;
     }
   }
 }

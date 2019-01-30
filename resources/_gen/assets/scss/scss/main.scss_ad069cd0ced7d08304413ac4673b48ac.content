@@ -316,7 +316,7 @@ template {
     .featured-image {
       margin-bottom: 0; } }
   .featured-image img {
-    max-width: 100%;
+    width: 100%;
     z-index: 1; }
   .featured-image .article-header {
     margin-top: 2em; }
@@ -427,14 +427,14 @@ hr {
   width: 50px;
   height: 50px; }
   .logo svg .logo-fill {
-    fill: #c98343;
+    fill: #e5e0ce;
     transition: 0.2s linear; }
   @media (min-width: 768px) {
     .logo svg {
       width: 100px;
       height: 100px; } }
   .logo svg:hover .logo-fill {
-    fill: #e5e0ce; }
+    fill: #c98343; }
 
 .extra {
   display: none; }
@@ -456,9 +456,9 @@ hr {
       font-size: 1em;
       text-transform: uppercase;
       padding: 10px;
-      color: #c98343; }
+      color: #e5e0ce; }
       .global-nav ul li a:hover {
-        color: #e5e0ce; }
+        color: #c98343; }
 
 .menu-button {
   position: absolute;
@@ -515,12 +515,13 @@ footer {
   margin: auto;
   padding: 1em;
   font-size: 0.7em;
-  text-align: center; }
+  text-align: center;
+  color: #e5e0ce; }
   footer a {
-    color: #c98343;
+    color: #e5e0ce;
     padding: .25em; }
     footer a:hover {
-      color: #e5e0ce; }
+      color: #c98343; }
 
 .avatars {
   list-style: none;
