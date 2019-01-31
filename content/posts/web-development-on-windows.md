@@ -83,7 +83,7 @@ compinit
 
 Relaunch Hyper. Directories are now pretty.
 
-The couple things I wish Hyper did (but will do soon hopefully) are allowing us to adjust the line height (it's too squished) and making color themes work correctly for VIM. VIM works great - but the colors are nowhere near right.
+The couple things I wish Hyper did (but will do soon hopefully) are ~~allowing us to adjust the line height (it's too squished)~~ (**update:** Hyper v2.1.1 allows us to adjust the line height) and making color themes work correctly for VIM. VIM works great - but the colors are nowhere near right.
 
 ## Development Setup
 
