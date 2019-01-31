@@ -546,6 +546,8 @@ footer {
     .article-summary .link {
       display: flex;
       text-align: left; } }
+  .article-summary .link .featured-image-thumb {
+    line-height: 0; }
   .article-summary .link .featured-image-thumb img {
     max-width: 125px;
     border-radius: 50%; }
