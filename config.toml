@@ -19,7 +19,7 @@ name = "related"
 weight = 150
 
 [permalinks]
-posts = "/:title"
+posts = "/:slug"
 
 [outputFormats.Algolia]
 baseName = "algolia"
