@@ -21,15 +21,5 @@ weight = 150
 [permalinks]
 posts = "/:slug"
 
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
-[params.algolia]
-vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"]
-
 [outputs]
-home = ["HTML", "RSS", "Algolia"]
+home = ["HTML", "RSS", "JSON"]
