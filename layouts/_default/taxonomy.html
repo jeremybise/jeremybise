@@ -2,6 +2,7 @@
 <div class="main">
   <h1 class="entry-title">{{ .Title }}</h1>
   {{ range where .Pages "Section" "posts" }}
-  {{ partial "article-summary" . }} {{ end }}
+  {{ partial "article-summary" . }}
+  {{ end }}
 </div>
 {{ end }}
