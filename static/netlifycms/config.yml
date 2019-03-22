@@ -2,8 +2,8 @@ backend:
   name: github
   repo: jeremybise/jeremybise-hugo
 publish_mode: editorial_workflow
-media_folder: "static/media"
-public_folder: "static/media"
+media_folder: "assets/media"
+public_folder: "assets/media"
 collections:
   - name: "posts"
     label: "Posts"
