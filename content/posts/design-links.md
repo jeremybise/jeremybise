@@ -3,7 +3,7 @@ title: "Design Links"
 categories:
   - "Design"
 date: "2019-01-15T00:00:00-05:00"
-featured_image: "/media/design-resources.png"
+featured_image: /uploads/design-resources.png
 ---
 
 ## Icons
