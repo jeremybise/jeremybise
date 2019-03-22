@@ -1,4 +1,5 @@
-{{ $img := resources.Get (.Get 0) }}
+{{ $img := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" (.Get 0) )  }}
+
 <figure>
   <img src="{{ $img.RelPermalink }}" alt="{{ (.Get 1) }}" />
   <figcaption>{{ (.Get 1) }}</figcaption>
