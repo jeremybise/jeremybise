@@ -2,10 +2,10 @@
   <a class="u-url link" href="{{ .RelPermalink }}">
     <div class="meta">
       {{ with .Params.featured_image }}
-      {{ $img := resources.Get . }}
-      {{ $image := ($img.Fill "200x200") }}
+      {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+      {{ $resized := $imageResource.Fill "200x200" }}
       <div class="featured-image-thumb">
-        <img src="{{ $image.RelPermalink }}" />
+        <img src="{{ $resized.RelPermalink }}" />
       </div>
       {{ end }}
     </div>
