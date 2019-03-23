@@ -7,6 +7,7 @@ featured_image: /uploads/design-resources.png
 
 * [Feather Icons](https://feathericons.com/ "Feather Icons")
 * [Font Awesome](https://fontawesome.com/icons?d=gallery "Font Awesome")
+* [Material Icons](https://material.io/tools/icons/?style=baseline)
 
 ## Stock Art
 
