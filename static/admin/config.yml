@@ -14,6 +14,7 @@ collections:
     create: true
     editor:
      preview: false
+    preview_path: {{slug}}
     fields:
       - {name: "title", label: "Title", widget: "string"}
       - {name: "date", label: "Date", widget: "datetime"}
