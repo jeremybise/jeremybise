@@ -7,6 +7,10 @@ categories:
   - Dev
 ---
 
+**UPDATE:** I've since stopped using WSL altogether since most of my work now is React, Gatsby or Hugo based. Node (and thus create-react-app and gatsby) all work fine (and seemingly faster) with the Windows native Node installation. Hugo is available via [Chocolatey](https://chocolatey.org/) natively for Windows. If I need to do WordPress or PHP stuff, there's a Docker-based setup called [Devilbox](http://devilbox.org/) which I started using on my Mac as well which makes that pretty darn neat, easy and efficient. But that's just me - the rest of the article might prove useful to someone trying to get WSL set up. :)
+
+Onward...
+
 Web development on Windows can be quite pleasant now thanks to Windows Subsystem Linux, which gives us typical Mac users a super familiar command line for our work. However, it takes some work to make the development experience actually _nice_.
 
 Here's how I went about it.
