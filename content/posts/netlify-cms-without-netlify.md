@@ -37,6 +37,8 @@ There are other options for continuous integration. AWS Amplify Console for inst
 
 If you use Amplify Console, it works very similarly to Netlify in that you hook up a Git repository, provide some build instructions (it actually has properly detected both Hugo and Gatsby for me without extra config), and each push will build your site. One thing missing from AWS Amplify Console (so far anyway) is webhooks. So as far as I know, there's no way to easily trigger an Amplify build outside of a repo push or manually clicking the button. If anybody knows otherwise, please share?
 
+## DO PREVIEW LINKS AND EDITORIAL WORKFLOW WORK WITH AMPLIFY????
+
 ## Summary
 
 So there you go - Netlify CMS will run like a charm without Netlify if you have the time and place to set up your own little Oauth server, which I have to say, these folks made pretty darn easy, it's all totally fine without Netlify. And thank you, Netlify, for making sure it all works without you. You guys rock so much I feel kind of guilty writing this. But, hey. Science.
