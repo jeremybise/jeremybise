@@ -1,11 +1,8 @@
 ---
-title: "Design Links"
-categories:
-  - "Design"
-date: "2019-01-15T00:00:00-05:00"
+title: Design Links
+date: '2019-01-15T00:00:00-05:00'
 featured_image: /uploads/design-resources.png
 ---
-
 ## Icons
 
 * [Feather Icons](https://feathericons.com/ "Feather Icons")
@@ -20,3 +17,4 @@ featured_image: /uploads/design-resources.png
 ## Cool Shit
 
 * [Duotone Generator](https://duotone.shapefactory.co/ "Duotone by Shapefactory")
+* [Flaticon Pattern Generator](https://pattern.flaticon.com/)
