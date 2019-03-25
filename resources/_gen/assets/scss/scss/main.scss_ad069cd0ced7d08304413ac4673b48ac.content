@@ -917,7 +917,8 @@ footer {
   color: #d33682; }
 
 body {
-  background: #e5e0ce; }
+  background: #e5e0ce;
+  font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320))); }
 
 a {
   color: #c98343;
