@@ -1,6 +1,5 @@
 footer {
   margin: auto;
-  padding: 1em;
   font-size: 0.7em;
   text-align: center;
   color: $pearlBush;
@@ -9,6 +8,15 @@ footer {
     padding: .25em;
     &:hover {
       color: $rawSienna;
+    }
+  }
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li {
+      flex: 1;
     }
   }
 }
