@@ -447,7 +447,7 @@ hr {
 
 .global-nav {
   align-self: center;
-  text-align: center; }
+  text-align: left; }
   .global-nav ul {
     list-style: none;
     margin: 0;
@@ -455,10 +455,24 @@ hr {
     .global-nav ul li a {
       font-size: 1em;
       text-transform: uppercase;
-      padding: 10px;
-      color: #e5e0ce; }
+      color: #e5e0ce;
+      display: flex; }
+      .global-nav ul li a svg {
+        width: 50px;
+        height: 50px;
+        flex: 1;
+        margin-right: 1em;
+        align-self: center; }
+        .global-nav ul li a svg path, .global-nav ul li a svg rect {
+          fill: #e5e0ce;
+          transition: 0.3s linear; }
+      .global-nav ul li a div {
+        flex: 3;
+        align-self: center; }
       .global-nav ul li a:hover {
         color: #c98343; }
+        .global-nav ul li a:hover svg path, .global-nav ul li a:hover svg rect {
+          fill: #c98343; }
 
 .menu-button {
   position: absolute;
@@ -513,7 +527,6 @@ hr {
 
 footer {
   margin: auto;
-  padding: 1em;
   font-size: 0.7em;
   text-align: center;
   color: #e5e0ce; }
@@ -522,6 +535,13 @@ footer {
     padding: .25em; }
     footer a:hover {
       color: #c98343; }
+  footer .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; }
+    footer .links li {
+      flex: 1; }
 
 .avatars {
   list-style: none;
