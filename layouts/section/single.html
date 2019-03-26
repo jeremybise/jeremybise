@@ -1,0 +1,56 @@
+{{ define "main" }}
+<article class="h-entry">
+  <div class="featured-image">
+    {{ with .Params.featured_image }}
+    {{ $img := resources.Get . }}
+    {{ $image := ($img.Fill "1200x600") }}
+    <img src="{{ $image.RelPermalink }}" />
+    {{ end }}
+    <div class="article-header">
+      <h1 class="p-name">{{ .Title }}</h1>
+      <p class="post-meta">
+        <a class="u-url" href="{{ .Permalink }}">
+          Published <time class="dt-published">{{ .PublishDate.Format "January 2, 2006" }}</time>
+        </a> by
+        <a rel="author" class="p-author h-card" href="https://jeremybise.com">Jeremy Bise</a>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <div class="e-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "webmention_form.html" . }}
+
+    {{ partial "webmentions.html" . }}
+  </div>
+</article>
+{{ end }}
+
+{{ define "sidebar" }}
+<div class="sidebar">
+  <h3>Posted In</h3>
+  <ul id="tags">
+    {{ with .Params.categories }}
+    {{ range . }}
+    <li>
+      <a class="p-category" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ with $related }}
+  <h3 class="first-heading">See Also</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

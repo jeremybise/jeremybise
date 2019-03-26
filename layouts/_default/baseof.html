@@ -25,6 +25,12 @@
   <link rel="pingback" href="https://webmention.io/jeremybise.com/xmlrpc" />
   <link rel="webmention" href="https://webmention.io/jeremybise.com/webmention" />
 
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
   {{ block "header_scripts" . }}
   <!-- Optional header scripts -->
   {{ end }}

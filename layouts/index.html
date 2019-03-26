@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="main">
-  {{ range where .Site.RegularPages "Section" "posts" }}
+  {{ range where .Site.RegularPages "Section" "in" (slice "posts" "recipes") }}
   {{ partial "article-summary" . }}
   {{ end }}
 </div>
