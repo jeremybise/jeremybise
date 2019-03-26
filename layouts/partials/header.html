@@ -14,12 +14,22 @@
   <div class="extra" id="extra">
     <nav class="global-nav">
       <ul>
-        <li><a href="/posts/">{{ partial "icons/note2" }}
-            <div>Notes</div>
-          </a></li>
-        <li><a href="/recipes/">{{ partial "icons/whisk2" }}
-            <div>Recipe Box</div>
-          </a></li>
+        <li>
+          <a href="/posts/">
+            <div class="icon">
+              {{ partial "icons/note" }}
+            </div>
+            <div class="label">Notes</div>
+          </a>
+        </li>
+        <li>
+          <a href="/recipes/">
+            <div class="icon">
+              {{ partial "icons/whisk" }}
+            </div>
+            <div class="label">Recipe Box</div>
+          </a>
+        </li>
       </ul>
     </nav>
     <form action="/search/" role="search" class="global-search">
