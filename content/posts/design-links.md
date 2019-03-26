@@ -1,15 +1,13 @@
 ---
-title: "Design Links"
-categories:
-  - "Design"
-date: "2019-01-15T00:00:00-05:00"
-featured_image: "/media/design-resources.png"
+title: Design Links
+date: '2019-01-15T00:00:00-05:00'
+featured_image: /uploads/design-resources.png
 ---
-
 ## Icons
 
 * [Feather Icons](https://feathericons.com/ "Feather Icons")
 * [Font Awesome](https://fontawesome.com/icons?d=gallery "Font Awesome")
+* [Material Icons](https://material.io/tools/icons/?style=baseline)
 
 ## Stock Art
 
@@ -20,3 +18,4 @@ featured_image: "/media/design-resources.png"
 ## Cool Shit
 
 * [Duotone Generator](https://duotone.shapefactory.co/ "Duotone by Shapefactory")
+* [Flaticon Pattern Generator](https://pattern.flaticon.com/)
