@@ -428,7 +428,7 @@ hr {
   height: 50px; }
   .logo svg .logo-fill {
     fill: #e5e0ce;
-    transition: 0.2s linear; }
+    transition: 0.3s linear; }
   @media (min-width: 768px) {
     .logo svg {
       width: 100px;
@@ -452,27 +452,30 @@ hr {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .global-nav ul li a {
-      font-size: 1em;
-      text-transform: uppercase;
-      color: #e5e0ce;
-      display: flex; }
-      .global-nav ul li a svg {
-        width: 50px;
-        height: 50px;
-        flex: 1;
-        margin-right: 1em;
-        align-self: center; }
-        .global-nav ul li a svg path, .global-nav ul li a svg rect {
-          fill: #e5e0ce;
-          transition: 0.3s linear; }
-      .global-nav ul li a div {
-        flex: 3;
-        align-self: center; }
-      .global-nav ul li a:hover {
-        color: #c98343; }
-        .global-nav ul li a:hover svg path, .global-nav ul li a:hover svg rect {
-          fill: #c98343; }
+    .global-nav ul li {
+      padding: 0; }
+      .global-nav ul li a {
+        font-size: 0.85em;
+        text-transform: uppercase;
+        color: #e5e0ce;
+        display: flex; }
+        .global-nav ul li a svg {
+          flex: 1;
+          margin-right: 0.75em;
+          width: 40px; }
+          .global-nav ul li a svg path, .global-nav ul li a svg rect {
+            fill: #e5e0ce;
+            transition: 0.3s linear; }
+        .global-nav ul li a .icon {
+          flex: 1;
+          align-self: center; }
+        .global-nav ul li a .label {
+          flex: 4;
+          align-self: center; }
+        .global-nav ul li a:hover {
+          color: #c98343; }
+          .global-nav ul li a:hover svg path, .global-nav ul li a:hover svg rect {
+            fill: #c98343; }
 
 .menu-button {
   position: absolute;
@@ -526,7 +529,7 @@ hr {
     color: #82898f; }
 
 footer {
-  margin: auto;
+  margin: 2em auto 0 auto;
   font-size: 0.7em;
   text-align: center;
   color: #e5e0ce; }
