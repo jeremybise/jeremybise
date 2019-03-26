@@ -32,7 +32,7 @@
     height: 50px;
     .logo-fill {
       fill: $pearlBush;
-      transition: 0.2s linear;
+      transition: $transition;
     }
     @media (min-width: 768px) {
       width: 100px;
@@ -64,24 +64,27 @@
     margin: 0;
     padding: 0;
     li {
+      padding: 0;
       a {
-        font-size: 1em;
+        font-size: 0.85em;
         text-transform: uppercase;
         color: $pearlBush;
         display: flex;
         svg {
-          width: 50px;
-          height: 50px;
           flex: 1;
-          margin-right: 1em;
-          align-self: center;
+          margin-right: 0.75em;
+          width: 40px;
           path, rect {
             fill: $pearlBush;
             transition: $transition;
           }
         }
-        div {
-          flex: 3;
+        .icon {
+          flex: 1;
+          align-self: center;
+        }
+        .label {
+          flex: 4;
           align-self: center;
         }
         &:hover {
