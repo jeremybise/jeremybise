@@ -2,9 +2,9 @@
 <article class="h-entry">
   <div class="featured-image">
     {{ with .Params.featured_image }}
-    {{ $img := resources.Get . }}
-    {{ $image := ($img.Fill "1200x600") }}
-    <img src="{{ $image.RelPermalink }}" />
+    {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+    {{ $resized := $imageResource.Fill "1200x600" }}
+    <img src="{{ $resized.RelPermalink }}" />
     {{ end }}
     <div class="article-header">
       <h1 class="p-name">{{ .Title }}</h1>
