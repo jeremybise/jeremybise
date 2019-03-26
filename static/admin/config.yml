@@ -1,14 +1,20 @@
 backend:
   name: github
   repo: jeremybise/jeremybise-hugo
+  branch: master
+  base_url: https://githuboauth.thosegeeks.com
 publish_mode: editorial_workflow
-media_folder: "static/media"
-public_folder: "/media"
+media_folder: "content/uploads"
+public_folder: "/uploads"
 collections:
   - name: "posts"
     label: "Posts"
+    label_singular: "Post"
     folder: "content/posts"
     create: true
+    editor:
+     preview: false
+    preview_path: "{{slug}}"
     fields:
       - {name: "title", label: "Title", widget: "string"}
       - {name: "date", label: "Date", widget: "datetime"}
