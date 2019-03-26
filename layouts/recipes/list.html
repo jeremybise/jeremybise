@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="main">
+  <h1 class="entry-title">{{ .Title }}</h1>
+  {{ range where .Pages "Section" "recipes" }}
+  {{ partial "article-summary" . }} {{ end }}
+</div>
+{{ end }}

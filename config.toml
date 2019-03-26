@@ -2,6 +2,9 @@ baseURL = "https://jeremybise.com/"
 languageCode = "en-us"
 title = "The notes of Jeremy Bise"
 
+[author]
+  name = "Jeremy Bise"
+
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableEmoji = true
