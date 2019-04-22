@@ -6,6 +6,8 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableEmoji = true
 
+googleAnalytics = "UA-275365-67"
+
 [author]
 name = "Jeremy Bise"
 
