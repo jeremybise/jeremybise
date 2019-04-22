@@ -5,7 +5,7 @@
 
   <form action="https://webmention.io/jeremybise.com/webmention" method="post">
     <input name="source" placeholder="source url">
-    <input name="target" value="{{ printf "https://jeremybise.com%s" .URL }}" type="hidden">
+    <input name="target" value="{{ printf "https://jeremybise.com%s" .RelPermalink }}" type="hidden">
     <input class="button" value="Send Webmention" type="submit">
   </form>
 

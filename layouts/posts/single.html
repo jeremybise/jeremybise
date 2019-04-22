@@ -3,7 +3,7 @@
   <div class="featured-image">
     {{ with .Params.featured_image }}
     {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
-    {{ $resized := $imageResource.Fill "1200x600" }}
+    {{ $resized := $imageResource }}
     <img src="{{ $resized.RelPermalink }}" />
     {{ end }}
 
