@@ -30,7 +30,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       color: $white;
       padding: 2em;
       width: 80%;
@@ -42,8 +42,10 @@
       margin: 0;
     }
     a {
+      color: $white;
+      transition: $transition;
       &:hover {
-        color: $white;
+        color: $teal300;
       }
     }
   }

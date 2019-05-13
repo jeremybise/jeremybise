@@ -2,12 +2,12 @@ footer {
   margin: 2em auto 0 auto;
   font-size: 0.7em;
   text-align: center;
-  color: $pearlBush;
+  color: $gray700;
   a {
-    color: $pearlBush;
-    padding: .25em;
+    color: $gray900;
+    padding: 0.25em;
     &:hover {
-      color: $rawSienna;
+      color: $gray700;
     }
   }
   .links {

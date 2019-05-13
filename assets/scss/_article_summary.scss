@@ -1,11 +1,12 @@
 .article-summary .link {
   display: block;
-  border-bottom: 1px solid $reallylight;
+  border-bottom: 1px solid $gray200;
   padding: 1em 0;
   text-align: center;
-  color: $text;
+  color: $gray700;
+  transition: $transition;
   &:hover {
-    color: $accent;
+    color: $teal700;
   }
   @media (min-width: 768px) {
     display: flex;
@@ -23,7 +24,7 @@
   }
   .meta {
     flex: 1;
-    color: $light;
+    color: $gray600;
     @media (min-width: 768px) {
       margin-right: 2em;
     }
@@ -36,7 +37,7 @@
     }
     time {
       display: none;
-      color: $light;
+      color: $gray600;
     }
     .entry-title {
       margin: 0;

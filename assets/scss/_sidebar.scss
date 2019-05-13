@@ -1,7 +1,7 @@
 .sidebar {
   margin-top: 1em;
-  @media(min-width: 768px) {
-    border-left: 1px solid #EEE;
+  @media (min-width: 768px) {
+    border-left: 1px solid #eee;
     padding: 0 1em;
     margin-top: 0;
   }
@@ -12,6 +12,6 @@
   }
   h3 {
     margin-top: 0;
-    color: $light;
+    color: $gray800;
   }
 }

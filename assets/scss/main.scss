@@ -1,5 +1,6 @@
 @import "normalize";
-@import "vars";
+//@import "vars";
+@import "vars-mixins";
 @import "layout";
 @import "type";
 @import "header";
@@ -10,14 +11,6 @@
 @import "syntax";
 
 body {
-  background: $background;
+  background: $white;
   font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
-}
-a {
-  color: $accent;
-  text-decoration: none;
-  transition: .2s linear;
-  &:hover {
-    color: $text;
-  }
 }
