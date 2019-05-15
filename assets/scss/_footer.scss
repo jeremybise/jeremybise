@@ -20,3 +20,13 @@ footer {
     }
   }
 }
+
+body.dark footer {
+  color: $gray600;
+  a {
+    color: $gray600;
+    &:hover {
+      color: $gray500;
+    }
+  }
+}

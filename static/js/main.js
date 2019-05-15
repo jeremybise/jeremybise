@@ -1,3 +1,8 @@
+// Check local storage for ligiht/dark mode
+document.addEventListener('DOMContentLoaded', (event) => {
+  ((localStorage.getItem('mode') || 'dark') === 'dark') ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
+})
+
 // Show an element
 var show = function (elem) {
   elem.classList.add('is-visible');

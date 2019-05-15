@@ -4,7 +4,6 @@
   padding: 1em 0;
   text-align: center;
   color: $gray700;
-  transition: $transition;
   &:hover {
     color: $teal700;
   }
@@ -47,5 +46,13 @@
         display: block;
       }
     }
+  }
+}
+
+body.dark .article-summary .link {
+  color: $gray600;
+  border-bottom: 1px solid $gray800;
+  &:hover {
+    color: $gray500;
   }
 }

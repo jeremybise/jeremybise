@@ -8,6 +8,12 @@ body {
   word-wrap: break-word; /* force long words to break */
   overflow-wrap: break-word; /* newer syntax standard that replaces word-wrap */
 }
+body.dark {
+  color: $gray500;
+  a {
+    color: $teal500;
+  }
+}
 
 a {
   color: $teal700;
@@ -49,6 +55,9 @@ hr {
   border-top: 0;
   border-bottom: 1px solid rgba($gray500, 0.3);
   margin: 2em 0;
+}
+body.dark hr {
+  border-bottom: 1px solid rgba($gray600, 0.3);
 }
 
 .first-heading {

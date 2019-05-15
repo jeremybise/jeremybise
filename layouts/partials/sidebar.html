@@ -50,6 +50,11 @@
       </p>
       <p><a href="/attributions/">Attributions</a><br /></p>
       <hr />
+      <p>
+        <button
+          onClick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')"
+          class="toggle-mode">{{ partial "icons/moon" }}</button>
+      </p>
     </footer>
   </div>
 </header>
