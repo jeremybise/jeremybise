@@ -1,7 +1,55 @@
-<div class="sidebar">
-  <h3>Social</h3>
-  <ul>
-    <li><a href="https://twitter.com/jeremybise" rel="me">Twitter</a></li>
-    <li><a href="https://github.com/jeremybise" rel="me">Github</a></li>
-  </ul>
-</div>
+<header class="global-header">
+  <div class="logo">
+    <a class="h-card" href="/" rel="me">
+      {{ partial "logo" }}
+    </a>
+  </div>
+  <div class="menu-button">
+    <a href="#extra" class="menu-link">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div class="extra" id="extra">
+    <nav class="global-nav">
+      <ul>
+        <li>
+          <a href="/posts/">
+            <div class="icon">
+              {{ partial "icons/note" }}
+            </div>
+            <div class="label">Notes</div>
+          </a>
+        </li>
+        <li>
+          <a href="/recipes/">
+            <div class="icon">
+              {{ partial "icons/whisk" }}
+            </div>
+            <div class="label">Recipe Box</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <form action="/search/" role="search" class="global-search">
+      <input type="text" placeholder="Search" type="text" name="s">
+    </form>
+
+    <footer>
+      <ul class="links">
+        <li><a href="https://twitter.com/jeremybise" rel="me">Twitter</a></li>
+        <li><a href="https://github.com/jeremybise" rel="me">Github</a></li>
+        <li><a href="https://twitch.tv/flarpamingus" rel="me">Twitch</a></li>
+        <li><a href="/feeds/">RSS</a></li>
+      </ul>
+      <hr />
+      <p>
+        &copy; 2018 Jeremy Bise.<br />
+        All rights reserved.
+      </p>
+      <p><a href="/attributions/">Attributions</a><br /></p>
+      <hr />
+    </footer>
+  </div>
+</header>
