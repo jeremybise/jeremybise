@@ -104,7 +104,10 @@ body.dark .global-nav {
       a {
         color: $gray600;
         &:hover {
-          color: $gray500;
+          color: $teal500;
+          svg path, svg rect {
+            fill: $teal500;
+          }
         }
         svg {
           path, rect {
