@@ -1,6 +1,7 @@
 ---
 title: Brownies
 date: 2019-06-11
+featured_image: /uploads/brownies.jpg
 categories:
   - recipes
   - recipes/dessert
